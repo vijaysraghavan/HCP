@@ -57,7 +57,7 @@
 
   <div class="mob-icon"> <span></span> </div>
     <?php session_start();if(isset($_SESSION['name'])){?>
-        <div style="float:right;color:#fff;font-size:11px;font-weight:bold;margin-right:6%;margin-top:5px;background:rgb(26, 103, 189) none repeat scroll 0%;border:1px solid rgb(26, 103, 189) none repeat scroll 0%;height:17px;border-radius:20px;padding:3px;width:88px;" ><?php echo "Welcome"." ".$_SESSION['name'];  ?></div>
+        <div style="float:right;color:#fff;font-size:11px;font-weight:bold;margin-right:6%;margin-top:5px;background:rgb(26, 103, 189) none repeat scroll 0%;border:1px solid rgb(26, 103, 189) none repeat scroll 0%;height:17px;border-radius:20px;padding:3px;width:188px;" ><?php echo "Welcome "." ".$_SESSION['name'];  ?></div>
     <?php }?>
   <nav>
 
