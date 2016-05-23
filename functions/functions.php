@@ -35,7 +35,7 @@ function loginUser($email, $password)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultLoginUser = pg_exec($dbconn, "SELECT * FROM salesforce.sign_in__c WHERE name='$email' AND your_password__c='$password'");
+        $resultLoginUser = pg_exec($dbconn, "SELECT * FROM salesforce.sign_up__c WHERE your_email__c='$email' AND password__c='$password'");
         if ($resultLoginUser) {
             $resultRows = pg_fetch_array($resultLoginUser);
             return $resultRows;
