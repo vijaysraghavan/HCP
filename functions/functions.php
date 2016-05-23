@@ -21,7 +21,7 @@ function addUser($name, $email, $password, $role, $about_me)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultAddUser = pg_query($dbconn, "INSERT INTO hcp_users(name, email, password,role,about_me)
+        $resultAddUser = pg_query($dbconn, "INSERT INTO salesforce.sign_up__c(name, your_email__c, password__c,your_role__c,about_you__c)
                   VALUES('$name','$email','$password','$role','$about_me');");
         $numRowsUser = pg_affected_rows($resultAddUser);
         if ($numRowsUser)
