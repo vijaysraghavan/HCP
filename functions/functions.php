@@ -35,7 +35,7 @@ function loginUser($email, $password)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultLoginUser = pg_exec($dbconn, "SELECT * FROM hcp_users WHERE email='$email' AND password='$password'");
+        $resultLoginUser = pg_exec($dbconn, "SELECT * FROM salesforce.sign_in__c WHERE name='$email' AND your_password__c='$password'");
         if ($resultLoginUser) {
             $resultRows = pg_fetch_array($resultLoginUser);
             return $resultRows;
@@ -49,7 +49,7 @@ function addEvents($name, $email, $phone, $event, $questions)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultAddEvents = pg_query($dbconn, "INSERT INTO hcp_events(name, email, phone,event,questions)
+        $resultAddEvents = pg_query($dbconn, "INSERT INTO salesforce.events__c(name, your_email__c, your_phone__c,select_event__c,your_questions__c)
                   VALUES('$name','$email','$phone','$event','$questions');");
         $numRowsEvents = pg_affected_rows($resultAddEvents);
         if ($numRowsEvents)
@@ -77,7 +77,7 @@ function addLiteratureRequest($name, $email, $phone, $medicine, $additional_note
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultAddLiteratureRequest = pg_query($dbconn, "INSERT INTO hcp_literature_request(name, email, phone,medicine,additional_notes)
+        $resultAddLiteratureRequest = pg_query($dbconn, "INSERT INTO salesforce.literature_request__c(name, your_email__c, your_phone__c,select_a_medicine__c,additional_notes__c)
                   VALUES('$name','$email','$phone','$medicine','$additional_notes');");
         $numRowsLiteratureRequest = pg_affected_rows($resultAddLiteratureRequest);
         return $numRowsLiteratureRequest;
