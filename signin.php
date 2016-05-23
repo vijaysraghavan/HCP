@@ -333,7 +333,7 @@ if (isset($_POST['login'])) {
     $loginUser = loginUser($userEmail, $userPassword);
     if ($loginUser) {
         session_start();
-        $_SESSION['username']=$loginUser['email'];
+        $_SESSION['username']=$loginUser['your_email__c'];
         $_SESSION['name']=$loginUser['name'];
         ?>
         <script type="text/javascript">
