@@ -63,7 +63,7 @@ function addSampleRequest($name, $email, $phone, $medicine)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultAddSampleRequest = pg_query($dbconn, "INSERT INTO hcp_sample_request(name, email, phone,medicine)
+        $resultAddSampleRequest = pg_query($dbconn, "INSERT INTO salesforce.sample_request__c(name, your_email__c, your_phone__c,select_a_medicine__c)
                   VALUES('$name','$email','$phone','$medicine');");
         $numRowsSampleRequest = pg_affected_rows($resultAddSampleRequest);
         if ($numRowsSampleRequest)
