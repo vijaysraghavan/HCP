@@ -961,7 +961,7 @@
 
                         <h2 class="title">educational events</h2>
 
-                        <div class="description">Connect with a VHealth specialist in real time via VideoChat, Talk,
+                        <div class="description">Connect with a Cintria specialist in real time via VideoChat, Talk,
                             E-mail, or view online Frequently Asked Questions and Answers.
                         </div>
 
