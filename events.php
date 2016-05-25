@@ -1218,11 +1218,11 @@
 
                         <form class="events-form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 
-                            <input class="required" type="text" placeholder="Your name" value="" name="name"/>
+                            <!--input class="required" type="text" placeholder="Your name" value="" name="name"/>
 
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
 
-                            <input type="text" placeholder="Your phone" value="" name="phone"/>
+                            <input type="text" placeholder="Your phone" value="" name="phone"/-->
 
                             <select name="event">
 
