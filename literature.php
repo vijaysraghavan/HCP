@@ -1198,21 +1198,21 @@
 
                         <form class="literature-form" method="post">
 
-                            <input class="required" type="text" placeholder="Your name" value="" name="name"/>
+                            <!--input class="required" type="text" placeholder="Your name" value="" name="name"/>
 
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
 
-                            <input type="text" placeholder="Your phone" value="" name="phone"/>
+                            <input type="text" placeholder="Your phone" value="" name="phone"/-->
 
                             <select name="medicines">
 
                                 <option>Select a medicine</option>
 
-                                <option>VIREAD®</option>
+                                <option>Viread</option>
 
-                                <option>IMODIUM®</option>
+                                <option>Imodium</option>
 
-                                <option>AMYViD®</option>
+                                <option>Amyvid</option>
 
                             </select>
 
