@@ -333,11 +333,11 @@ if (isset($_POST['login'])) {
     $loginUser = loginUser($userEmail, $userPassword);
     if ($loginUser) {
         session_start();
-        $_SESSION['username']=$loginUser['your_email__c'];
+        $_SESSION['username']=$loginUser['email'];
         $_SESSION['name']=$loginUser['name'];
         ?>
         <script type="text/javascript">
-            $.notify('User logged in successfully', 'success');
+            $.notify('User signed in successfully.', 'success');
             /* function showPage() {
              window.location.href='index.html';
              } */
