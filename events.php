@@ -1240,7 +1240,7 @@
 
                             </select>
 
-                            <textarea class="required" placeholder="Your questions" name="text"></textarea>
+                            <!--textarea class="required" placeholder="Your questions" name="text"></textarea-->
 
                             <div class="submit-wraper">
 
