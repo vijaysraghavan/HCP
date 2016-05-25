@@ -985,11 +985,9 @@
 
                                         <div class="image-socials-box">
 
-                                            <div class="vertical-align"><a href="#"><img src="img/c-icon.png"
-                                                                                         alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon1.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon2.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon3.png" alt=""/></a></div>
+                                            <div class="vertical-align">
+                                                <input type="submit" value="Register" name="nti-submit"/>
+                                            </div>
 
                                         </div>
 
