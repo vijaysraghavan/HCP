@@ -64,29 +64,24 @@
     <nav>
 
         <ul>
-            <li><a href="index.php">Overview</a></li>
-
-            <li><a href="events.php">Events</a></li>
-
-            <li><a href="samples.php" class="act">Samples Request</a></li>
-
-            <li><a href="literature.php">Literature Request</a></li>
-
-            <li><a href="supportcases.php">Support Cases</a></li>
-
-            <li><a href="signup.php">Signup</a></li>
             <?php
             session_start();
             if (isset($_SESSION['username'])) {
                 ?>
                 <li>
-                    <a class="dropdown-item" href="logout.php">Logout</a>
+
+                    <li><a href="index.php">Overview</a></li>
+                    <li><a href="events.php">Events</a></li>
+                    <li><a href="samples.php" class="act">Samples Request</a></li>
+                    <li><a href="literature.php">Literature Request</a></li>
+                    <li><a href="supportcases.php">Support Cases</a></li>
+                    <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+                    
                 </li>
+                <li> </li>
+                <!--<li style="width:50px;"><a href="#"><?php /*echo "Hi"."".$_SESSION['name']; */ ?></a></li>-->
                 <?php
-            } else {
-                ?>
-                <li><a href="signin.php">Sign In</a></li>
-            <?php } ?>
+            }  ?>
         </ul>
 
     </nav>
