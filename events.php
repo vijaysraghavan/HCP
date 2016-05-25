@@ -986,7 +986,7 @@
                                         <div class="image-socials-box">
 
                                             <div class="vertical-align">
-                                                <input type="submit" value="Register" name="nti-submit"/>
+                                                <a href="#">Register</a>
                                             </div>
 
                                         </div>
