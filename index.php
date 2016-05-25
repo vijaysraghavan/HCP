@@ -120,7 +120,7 @@
 
                                         <div class="banner-article">
 
-                                            <h1 class="title">Welcome to vHealth</h1>
+                                            <h1 class="title">Welcome to Cintria</h1>
 
                                             <div class="description">We are your primary Health Care resource. Learn
                                                 about our medications, and find services and support for your office and
@@ -341,7 +341,7 @@
 
                             <h2 class="h2 titel-left">Our Commitment</h2>
 
-                            <p>VHealth is committed to providing our health care partners and their patients with tools
+                            <p>Cintria is committed to providing our health care partners and their patients with tools
                                 and resources to help manage treatment. Here you'll discover services that are designed
                                 to help support your office in order to help your patients.</p>
 
@@ -356,7 +356,7 @@
 
                                 <h4 class="h4">Events</h4>
 
-                                <p>Connect with a VHealth specialist in real time via VideoChat, Talk, E-mail, or view
+                                <p>Connect with a Cintria specialist in real time via VideoChat, Talk, E-mail, or view
                                     online Frequently Asked Questions and Answers.</p>
 
                             </article>
@@ -401,7 +401,7 @@
 
                                 <h4 class="h4">Support Cases</h4>
 
-                                <p>VHealth is committed to providing the most up-to-date, accurate, and timely medical
+                                <p>Cintria is committed to providing the most up-to-date, accurate, and timely medical
                                     information to health care professionals.</p>
 
                             </article>
@@ -742,7 +742,7 @@
 
                             <h5 class="h5">quick settings</h5>
 
-                            <p>One VHealth account for everything health care and resources</p>
+                            <p>One Cintria account for everything health care and resources</p>
 
                         </article>
 
@@ -786,7 +786,7 @@
 
                             <h5 class="h5">grants</h5>
 
-                            <p>VHealth supports a range of grants, philanthropic grants, and managed care educational
+                            <p>Cintria supports a range of grants, philanthropic grants, and managed care educational
                                 grants</p>
 
                         </article>
@@ -1737,7 +1737,7 @@
 
                 <div class="copy">
 
-                    <span>© 2016 All rights reserved. VHealth</span>
+                    <span>© 2016 All rights reserved. Cintria</span>
 
                 </div>
 
