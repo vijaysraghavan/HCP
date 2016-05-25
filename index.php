@@ -83,7 +83,7 @@
 
 <div id="loader-wrapper">
 
-    <img src="img/theme-2/logo-load.png" alt=""/>
+    <!--img src="img/theme-2/logo-load.png" alt=""/-->
 
     <span></span>
 
