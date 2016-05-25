@@ -337,7 +337,7 @@ if (isset($_POST['login'])) {
         $_SESSION['name']=$loginUser['name'];
         ?>
         <script type="text/javascript">
-            $.notify('User signed in successfully.', 'success');
+            $.notify('User signed-in successfully.', 'success');
             /* function showPage() {
              window.location.href='index.html';
              } */
@@ -353,7 +353,7 @@ if (isset($_POST['login'])) {
     else{
     ?>
         <script type="text/javascript">
-            $.notify('User not logged in', {
+            $.notify('User sign-in failed.', {
                 style: 'bootstrap'
             });
         </script>
