@@ -65,29 +65,8 @@
 
         <ul>
             <li><a href="index.php">Overview</a></li>
-
-            <li><a href="events.php">Events</a></li>
-
-            <li><a href="samples.php">Samples Request</a></li>
-
-            <li><a href="literature.php">Literature Request</a></li>
-
-            <li><a href="supportcases.php">Support Cases</a></li>
-
             <li><a href="signup.php" class="act">Signup</a></li>
-
-            <?php
-            session_start();
-            if (isset($_SESSION['username'])) {
-                ?>
-                <li>
-                    <a class="dropdown-item" href="logout.php">Logout</a>
-                </li>
-                <?php
-            } else {
-                ?>
-                <li><a href="signin.php">Sign In</a></li>
-            <?php } ?>
+            <li><a href="signin.php">Sign In</a></li>
         </ul>
 
     </nav>
