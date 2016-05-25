@@ -104,9 +104,9 @@
 
                     <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
 
-                        <h2 class="title">sign up</h2>
+                        <h2 class="title">Support Cases</h2>
 
-                        <div class="description">One account is all you need</div>
+                        <div class="description">VHealth is committed to providing the most up-to-date, accurate, and timely medical information to health care professionals.</div>
 
                     </div>
 
