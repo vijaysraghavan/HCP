@@ -94,7 +94,108 @@
 
   <div class="blocks-container"> 
 
-    
+    <!-- BLOCK "TYPE 7" -->
+
+        <div class="block type-7 scroll-to-block" data-id="contact">
+
+            <div class="container">
+
+                <div class="row page-tagline">
+
+                    <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
+
+                        <h2 class="title">sign up</h2>
+
+                        <div class="description">One account is all you need</div>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
+
+                        <div class="contact-thumbs"><img src="img/theme-2/icon7.png" alt=""/>
+
+                            <article class="normall">
+
+                                <p> Tel: <br>
+
+                                    <a href="tel:+16787497090">+1 678.749.7090</a></p>
+
+                            </article>
+
+                        </div>
+
+                        <div class="contact-thumbs"><img src="img/theme-2/icon8.png" alt=""/>
+
+                            <article class="normall">
+
+                                <p> Email: <br>
+
+                                    <a href="maito:info@vebinary.com">info@vebinary.com</a></p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-7 col-md-offset-1 wow fadeInRight" data-wow-delay="0.3s">
+
+                        <!--form class="signup1-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
+                            <input class="required" type="text" placeholder="Your first name" value="" name="fname"/>
+                            <input class="required" type="text" placeholder="Your last name" value="" name="lname"/>
+                            <input class="required" type="text" placeholder="Your email" value="" name="email"/>
+                            <input class="required" type="password" placeholder="Your password" value="" name="password"/>
+                            <input type="tel" placeholder="Your phone" value="" name="phone"/>
+                            <input type="text" placeholder="Your birthdate (MM/DD/YYYY)" value="" name="birthdate"/>
+                            <input type="text" placeholder="Mailing Street" value="" name="mailingstreet"/>
+                            <input type="text" placeholder="Mailing City" value="" name="mailingcity"/>
+                            <input type="text" placeholder="Mailing State" value="" name="mailingstate"/>
+                            <input type="text" placeholder="Mailing Postal Code" value="" name="mailingpostalcode"/>
+                            <input type="text" placeholder="Mailing Country" value="" name="mailingcountry"/>
+                            <select name="title">
+                                <option>Title</option>
+                                <option>Physician</option>
+                                <option>Nurse</option>
+                                <option>Pharmacist</option>
+                            </select>
+                            <input type="text" placeholder="Department" value="" name="department"/>
+
+                            <div class="submit-wraper">
+                                <div class="button">create account
+                                    <input type="submit" value="" name="submit"/>
+                                </div>
+                            </div>
+
+
+                        </form-->
+
+                        <!-- <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" /> -->
+
+
+                    </div>
+
+                    <div class="form-popup">
+
+                        <div class="form-popup-close-layer"></div>
+
+                        <div class="form-popup-content">
+
+                            <div class="text">Lorem Ipsum Dollor Sit Ammet consectetur dim Elit</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     <!-- FOOTER -->
 
