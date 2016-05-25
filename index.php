@@ -25,26 +25,7 @@
     <link rel="shortcut icon" href="img/favicon.ico"/>
 
     <title>Home</title>
-    <!--<style>
-        .badge {
-            display: inline-block;
-            min-width: 10px;
-            padding: 7px 14px;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 1;
-            color: #fff;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: baseline;
-            background-color: #308C9E;
-            border-radius: 14px;
-            /*  margin: -7px -133px;*/
-            float: right;
-        }
-
-    </style>
--->
+    
 </head>
 
 <body data-theme="theme-2">
@@ -338,7 +319,7 @@
 
         <!-- BLOCK "TYPE 8" -->
 
-        <div class="new-block type-8 scroll-to-block" data-id="how-it-work">
+        <div class="new-block type-8 scroll-to-block" data-id="our-commitment">
 
             <div class="container">
 
@@ -703,7 +684,7 @@
 
         <!-- BLOCK "TYPE 3" -->
 
-        <div class="new-block type-3 type-3-1 scroll-to-block" data-id="benefits">
+        <div class="new-block type-3 type-3-1 scroll-to-block" data-id="service-offerings">
 
             <div class="container type-3-text">
 
@@ -711,7 +692,7 @@
 
                     <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
 
-                        <h2 class="title">Support Services</h2>
+                        <h2 class="title">Service Offerings</h2>
 
                         <div class="description">To help offer your patients services, and to provide authorization for
                             certain prescriptions, please use the support services below.
