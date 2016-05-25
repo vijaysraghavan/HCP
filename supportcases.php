@@ -53,7 +53,7 @@
 
 <!-- HEADER -->
 
-<header class="act default-act"> <a href="index.php" id="logo"><img src="img/theme-2/logo.png" alt=""/><img class="act" src="img/theme-2/logo-act.png" alt=""/></a>
+<header class="act default-act"> <a href="index.php" id="logo"><img src="img/theme-2/Cintria-Logo.png" alt=""/><img class="act" src="img/theme-2/Cintria-Logo.png" alt=""/></a>
 
   <div class="mob-icon"> <span></span> </div>
     <?php session_start();if(isset($_SESSION['name'])){?>
