@@ -106,7 +106,7 @@
 
                         <h2 class="title">Support Cases</h2>
 
-                        <div class="description">VHealth is committed to providing the most up-to-date, accurate, and timely medical information to health care professionals.</div>
+                        <div class="description">Cintria is committed to providing the most up-to-date, accurate, and timely medical information to health care professionals.</div>
 
                     </div>
 
@@ -219,7 +219,7 @@
 
         <div class="media-icon"> <a href="#"><img src="img/theme-2/c-icon.png" alt=""/></a> <a href="#"><img src="img/theme-2/c-icon1.png" alt=""/></a> <a href="#"><img src="img/theme-2/c-icon2.png" alt=""/></a> <a href="#"><img src="img/theme-2/c-icon3.png" alt=""/></a> </div>
 
-        <div class="copy"> <span>© 2016 All rights reserved. VHealth</span> </div>
+        <div class="copy"> <span>© 2016 All rights reserved. Cintria</span> </div>
 
       </div>
 
