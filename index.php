@@ -35,8 +35,8 @@
 
 <header>
 
-    <a href="index.php" id="logo"><img src="img/theme-2/logo.png" alt=""/><img class="act"
-                                                                               src="img/theme-2/logo-act.png"
+    <a href="index.php" id="logo"><img src="img/theme-2/Cintria-Logo.png" alt=""/><img class="act"
+                                                                               src="img/theme-2/Cintria-Logo.png"
                                                                                alt=""/></a>
 
     <div class="mob-icon">
