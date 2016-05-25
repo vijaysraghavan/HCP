@@ -1218,7 +1218,7 @@
 
                             <!--textarea class="required" placeholder="Your message" name="text"></textarea-->
 
-                            <div class="submit-wraper">
+                            <!--div class="submit-wraper"-->
 
                                 <div class="button">Request Samples
 
@@ -1226,7 +1226,7 @@
 
                                 </div>
 
-                            </div>
+                            <!--/div-->
 
                         </form>
 
