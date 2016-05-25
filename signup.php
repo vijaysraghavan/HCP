@@ -165,34 +165,29 @@
 
                         <form class="signup1-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
-                            <input class="required" type="text" placeholder="Your name" value="" name="name"/>
-
+                            <input class="required" type="text" placeholder="Your first name" value="" name="fname"/>
+                            <input class="required" type="text" placeholder="Your last name" value="" name="lname"/>
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
-
-                            <input type="password" placeholder="Your password" value="" name="password"/>
-
-                            <select name="role">
-
-                                <option>Role</option>
-
+                            <input class="required" type="password" placeholder="Your password" value="" name="password"/>
+                            <input type="tel" placeholder="Your phone" value="" name="phone"/>
+                            <input type="text" placeholder="Your birthdate (MM/DD/YYYY)" value="" name="birthdate"/>
+                            <input type="text" placeholder="Mailing Street" value="" name="mailingstreet"/>
+                            <input type="text" placeholder="Mailing City" value="" name="mailingcity"/>
+                            <input type="text" placeholder="Mailing State" value="" name="mailingstate"/>
+                            <input type="text" placeholder="Mailing Postal Code" value="" name="mailingpostalcode"/>
+                            <input type="text" placeholder="Mailing Country" value="" name="mailingcountry"/>
+                            <select name="title">
+                                <option>Title</option>
                                 <option>Physician</option>
-
                                 <option>Nurse</option>
-
                                 <option>Pharmacist</option>
-
                             </select>
-
-                            <textarea class="required" placeholder="About you" name="text"></textarea>
+                            <input type="text" placeholder="Department" value="" name="department"/>
 
                             <div class="submit-wraper">
-
                                 <div class="button">create account
-
                                     <input type="submit" value="" name="submit"/>
-
                                 </div>
-
                             </div>
 
 
@@ -365,7 +360,7 @@ if (isset($_POST['submit'])) {
     if ($resultAddUser) {
         ?>
         <script type="text/javascript">
-            $.notify('User Added Successfully', 'success');
+            $.notify('New user added successfully.', 'success');
             /*setTimeout(
                 function () {
                     window.location.href = 'signin.php'
@@ -378,7 +373,7 @@ if (isset($_POST['submit'])) {
     else{
     ?>
         <script type="text/javascript">
-            $.notify('User Not Added Successfully', {
+            $.notify('New user creation failed.', {
                 style: 'bootstrap'
             });
         </script>
