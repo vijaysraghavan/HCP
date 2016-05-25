@@ -44,17 +44,7 @@
         <ul>
 
             <li><a href="index.php">Overview</a></li>
-
-            <li><a href="events.php">Events</a></li>
-
-            <li><a href="samples.php">Samples Request</a></li>
-
-            <li><a href="literature.php">Literature Request</a></li>
-
-            <li><a href="supportcases.php">Support Cases</a></li>
-
             <li><a href="signup.php">Sign Up</a></li>
-
             <li><a href="signin.php" class="act">Sign In</a></li>
 
         </ul>
