@@ -8,16 +8,16 @@
 function dbConnect()
 {
     global $dbconn;
-    $dbconn = pg_Connect("host=ec2-54-243-245-58.compute-1.amazonaws.com dbname=dejgd9ipbp9s6m user=jxxiokmicpqssw password=NA1U5Ka3_l2NCJezj9IChi2lu8");
+    $dbconn = pg_Connect("host=ec2-54-83-5-43.compute-1.amazonaws.com dbname=d2ktmglq845met user=hvsrxhplqduvfs password=jOukVt9w7sHyoVal8zdI5cRqcZ");
     if (!$dbconn) {
-        die("Connection Error" . pg_last_error());
+        die("Postgres DB Connection Error" . pg_last_error());
         return false;
     } else {
         return $dbconn;
     }
 }
 
-function addUser($name, $email, $password, $role, $about_me)
+/*function addUser($name, $email, $password, $role, $about_me)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
@@ -29,13 +29,13 @@ function addUser($name, $email, $password, $role, $about_me)
         else
             return false;
     }
-}
+}*/
 
 function loginUser($email, $password)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultLoginUser = pg_exec($dbconn, "SELECT * FROM salesforce.sign_up__c WHERE your_email__c='$email' AND password__c='$password'");
+        $resultLoginUser = pg_exec($dbconn, "SELECT * FROM salesforce.contact WHERE your_email='$email' AND password__c='$password'");
         if ($resultLoginUser) {
             $resultRows = pg_fetch_array($resultLoginUser);
             return $resultRows;
@@ -45,7 +45,7 @@ function loginUser($email, $password)
     }
 }
 
-function addEvents($name, $email, $phone, $event, $questions)
+/*function addEvents($name, $email, $phone, $event, $questions)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
@@ -93,6 +93,6 @@ function addNewsLetter($email)
         $numRowsNewsLetter = pg_affected_rows($resultAddNewsLetter);
         return $numRowsNewsLetter;
     }
-}
+}*/
 
 ?>
