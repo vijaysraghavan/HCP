@@ -1242,7 +1242,7 @@
 
                             <!--textarea class="required" placeholder="Your questions" name="text"></textarea-->
 
-                            <div class="submit-wraper">
+                            <!--div class="submit-wraper"-->
 
                                 <div class="button">Register
 
@@ -1250,7 +1250,7 @@
 
                                 </div>
 
-                            </div>
+                            <!--/div-->
 
                         </form>
                         <!--<input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />-->
