@@ -1216,9 +1216,9 @@
 
                             </select>
 
-                            <textarea class="required" placeholder="Additional notes" name="text"></textarea>
+                            <!--textarea class="required" placeholder="Additional notes" name="text"></textarea-->
 
-                            <div class="submit-wraper">
+                            <!--div class="submit-wraper"-->
 
                                 <div class="button">Request Literature
 
@@ -1226,7 +1226,7 @@
 
                                 </div>
 
-                            </div>
+                            <!--/div-->
 
                         </form>
 
