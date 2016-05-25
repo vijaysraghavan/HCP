@@ -210,7 +210,7 @@
                                                                                         alt=""/></a> <a href="#"><img
                             src="img/theme-2/c-icon3.png" alt=""/></a></div>
 
-                <div class="copy"><span>© 2016 All rights reserved. VHealth</span></div>
+                <div class="copy"><span>© 2016 All rights reserved. Cintria</span></div>
 
             </div>
 
