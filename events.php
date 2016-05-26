@@ -986,7 +986,7 @@
                                         <div class="image-socials-box">
 
                                             <div class="vertical-align">
-                                                <a href="#" vertical-align: middle>Register</a>
+                                                <a href="#"><img src="img/mouse.png" alt=""/></a>
                                             </div>
 
                                         </div>
