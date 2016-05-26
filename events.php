@@ -986,7 +986,7 @@
                                         <div class="image-socials-box">
 
                                             <div class="vertical-align">
-                                                <a href="#"><img src="img/mouse.png" alt=""/></a>
+                                                <a href="#"><img src="img/icon15.png" alt=""/></a>
                                             </div>
 
                                         </div>
