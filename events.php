@@ -986,7 +986,7 @@
                                         <div class="image-socials-box">
 
                                             <div class="vertical-align">
-                                                <a href="#">Register</a>
+                                                <a href="#" vertical-align: middle>Register</a>
                                             </div>
 
                                         </div>
