@@ -1018,11 +1018,9 @@
 
                                         <div class="image-socials-box">
 
-                                            <div class="vertical-align"><a href="#"><img src="img/c-icon.png"
-                                                                                         alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon1.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon2.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon3.png" alt=""/></a></div>
+                                            <div class="vertical-align">
+                                                <a href="#"><img src="img/icon15.png" alt=""/></a>
+                                            </div>
 
                                         </div>
 
@@ -1051,11 +1049,9 @@
 
                                         <div class="image-socials-box">
 
-                                            <div class="vertical-align"><a href="#"><img src="img/c-icon.png"
-                                                                                         alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon1.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon2.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon3.png" alt=""/></a></div>
+                                            <div class="vertical-align">
+                                                <a href="#"><img src="img/icon15.png" alt=""/></a>
+                                            </div>
 
                                         </div>
 
@@ -1084,11 +1080,9 @@
 
                                         <div class="image-socials-box">
 
-                                            <div class="vertical-align"><a href="#"><img src="img/c-icon.png"
-                                                                                         alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon1.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon2.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon3.png" alt=""/></a></div>
+                                            <div class="vertical-align">
+                                                <a href="#"><img src="img/icon15.png" alt=""/></a>
+                                            </div>
 
                                         </div>
 
@@ -1118,11 +1112,9 @@
 
                                         <div class="image-socials-box">
 
-                                            <div class="vertical-align"><a href="#"><img src="img/c-icon.png"
-                                                                                         alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon1.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon2.png" alt=""/></a> <a href="#"><img
-                                                        src="img/c-icon3.png" alt=""/></a></div>
+                                            <div class="vertical-align">
+                                                <a href="#"><img src="img/icon15.png" alt=""/></a>
+                                            </div>
 
                                         </div>
 
@@ -1157,117 +1149,7 @@
         </div>
 
 
-        <!-- BLOCK "TYPE 7" -->
-
-        <div class="block type-7 scroll-to-block" data-id="contact">
-
-            <div class="container">
-
-                <div class="row page-tagline">
-
-                    <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
-
-                        <h2 class="title">Event Registration</h2>
-
-                        <div class="description">Register for an event below</div>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
-
-                        <div class="contact-thumbs"><img src="img/theme-2/icon7.png" alt=""/>
-
-                            <article class="normall">
-
-                                <p> Tel: <br>
-
-                                    <a href="tel:+16787497090">+1 678.749.7090</a></p>
-
-                            </article>
-
-                        </div>
-
-                        <div class="contact-thumbs"><img src="img/theme-2/icon8.png" alt=""/>
-
-                            <article class="normall">
-
-                                <p> Email: <br>
-
-                                    <a href="maito:info@vebinary.com">info@vebinary.com</a></p>
-
-                            </article>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-7 col-md-offset-1 wow fadeInRight" data-wow-delay="0.3s">
-
-                        <form class="events-form" method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-
-                            <!--input class="required" type="text" placeholder="Your name" value="" name="name"/>
-
-                            <input class="required" type="text" placeholder="Your email" value="" name="email"/>
-
-                            <input type="text" placeholder="Your phone" value="" name="phone"/-->
-
-                            <select name="event">
-
-                                <option>Select an event</option>
-
-                                <option>AACN's National Teaching Institute & Critical Care Exposition</option>
-
-                                <option>Building Evidence for 3D Printing in Medicine</option>
-
-                                <option>AHDI Annual Conference</option>
-
-                                <option>ACEP Scientific Assembly</option>
-
-                                <option>PCHA's 2016 Connected Health Conference</option>
-
-                            </select>
-
-                            <!--textarea class="required" placeholder="Your questions" name="text"></textarea-->
-
-                            <!--div class="submit-wraper"-->
-
-                                <div class="button">Register
-
-                                    <input type="submit" value="" name="submit"/>
-
-                                </div>
-
-                            <!--/div-->
-
-                        </form>
-                        <!--<input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />-->
-
-
-                    </div>
-
-                    <div class="form-popup">
-
-                        <div class="form-popup-close-layer"></div>
-
-                        <div class="form-popup-content">
-
-                            <div class="text">Lorem Ipsum Dollor Sit Ammet consectetur dim Elit</div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
+        
         <!-- BLOCK "MAP" -->
 
         <!--div>
