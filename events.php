@@ -388,7 +388,8 @@
 include_once("functions/functions.php");
 if (isset($_POST['RegisterEvent'])) {
     $title = pg_escape_string($_POST['title']);
-    $contact_sfid = pg_escape_string($_POST['contact_sfid']);
+    //$contact_sfid = pg_escape_string($_POST['contact_sfid']);
+    $contact_sfid = $_SESSION['contact_sfid'];
     
     $registerEvent = registerEvent($title, $contact_sfid);
     
