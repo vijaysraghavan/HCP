@@ -263,7 +263,7 @@ if (isset($_POST['login'])) {
         session_start();
         $_SESSION['username']=$loginUser['email'];
         $_SESSION['name']=$loginUser['name'];
-        $_SESSION['user_id']=$loginUser['id'];
+        $_SESSION['contact_sfid']=$loginUser['sfid'];
         ?>
         <script type="text/javascript">
             $.notify('User signed-in successfully.', 'success');
