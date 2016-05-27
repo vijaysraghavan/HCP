@@ -21,7 +21,7 @@ function addUser($firstname, $lastname, $email, $password, $phone, $dob, $mail_s
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $queryString = "INSERT INTO salesforce.Contact(firstname, lastname, email, password__c, phone, birthdate, mailistreet, mailingcity, mailingstate, mailingpostalcode, mailingcountry, title, department)
+        $queryString = "INSERT INTO salesforce.Contact(firstname, lastname, email, password__c, phone, birthdate, mailingstreet, mailingcity, mailingstate, mailingpostalcode, mailingcountry, title, department)
                   VALUES('$firstname','$lastname', '$email', '$password', '$phone', '$dob','$mail_street','$mail_city','$mail_state','$mail_post_code','$mailing_country','$title','$department');";
         $resultAddUser = pg_query($dbconn, $queryString);
         $numRowsUser = pg_affected_rows($resultAddUser);
