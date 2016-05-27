@@ -17,19 +17,20 @@ function dbConnect()
     }
 }
 
-/*function addUser($name, $email, $password, $role, $about_me)
+function addUser($firstname, $lastname, $email, $password, $phone, $dob, $mail_street, $mail_city, $mail_city, $mail_state, $mail_post_code, $mailing_country, $title, $department)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-        $resultAddUser = pg_query($dbconn, "INSERT INTO salesforce.sign_up__c(name, your_email__c, password__c,your_role__c,about_you__c)
-                  VALUES('$name','$email','$password','$role','$about_me');");
+        $queryString = "INSERT INTO salesforce.Contact(firstname, lastname, email, password__c, phone, birthdate, mailistreet, mailingcity, mailingstate, mailingpostalcode, mailingcountry, title, department)
+                  VALUES('$firstname','$lastname', '$email', '$password', '$phone', '$dob','$mail_street','$mail_city','$mail_state','$mail_post_code','$mailing_country','$title','$department');";
+        $resultAddUser = pg_query($dbconn, $queryString);
         $numRowsUser = pg_affected_rows($resultAddUser);
         if ($numRowsUser)
             return $numRowsUser;
         else
             return false;
     }
-}*/
+}
 
 function loginUser($email, $password)
 {
