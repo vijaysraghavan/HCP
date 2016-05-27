@@ -133,6 +133,35 @@
                                         and critical care nurses and take home new evidence-based knowledge to make an
                                         impact at the bedside.
                                     </div>
+                                    
+                                    <?php
+                                        $contact_sfid = $_SESSION['contact_sfid'];
+                                        $status = registeredStatus('AACN's National Teaching Institute & Critical Care Exposition', $contact_sfid);
+                                        if ($status) {
+                                    ?>
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                        <div class="submit-wraper">
+                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
+                                            <input type="hidden" value="AACN's National Teaching Institute & Critical Care Exposition" name="title">
+                                            <div class="button">Cancel Event
+                                                <input type="submit" name="CancelEvent"/>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <?php } else {
+                                        $contact_sfid = $_SESSION['contact_sfid'];
+                                    ?>
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="events">
+                                        <div class="submit-wraper">
+                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
+                                            <input type="hidden" value="AACN's National Teaching Institute & Critical Care Exposition" name="title">
+                                            <div class="button">Register Event
+                                                <input type="submit" name="RegisterEvent"/>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <?php } ?>
 
                                 </div>
 
@@ -376,56 +405,57 @@
 <script src="js/notify.js"></script>
 <?php
 include_once("functions/functions.php");
-if (isset($_POST['submit'])) {
+if (isset($_POST['RegisterEvent'])) {
     //Post Values
-    $name = pg_escape_string($_POST['name']);
-    $email = pg_escape_string($_POST['email']);
-    $phone = pg_escape_string($_POST['phone']);
-    $event = pg_escape_string($_POST['event']);
-    $questions = pg_escape_string($_POST['text']);
-
+    $title = pg_escape_string($_POST['title']);
+    $contact_sfid = pg_escape_string($_POST['contact_sfid']);
+    
+    $registerEvent = registerEvent($title, $contact_sfid);
+    
     //Passing to Add Events
-    $addEvents = addEvents($name, $email, $phone, $event, $questions);
-    if ($addEvents) {
+    if ($registerEvent) {
         ?>
         <script type="text/javascript">
-            $.notify("Added Event Successfully", 'success');
+            $.notify("Event registered successfully.", 'success');
         </script>
     <?php
     }
     else{
     ?>
         <script type="text/javascript">
-            $.notify("Added  Event was not Successful", {
+            $.notify("Event registration failed.", {
                 style: 'bootstrap'
             });
         </script>
         <?php
     }
 }
-if (isset($_POST['newsletter'])) {
-    //Post Values
-    $email = pg_escape_string($_POST['email']);
 
-    //Passing values
-    $addNewsLetter = addNewsLetter($email);
-    if ($addNewsLetter) {
+if (isset($_POST['CancelEvent'])) {
+    $title = pg_escape_string($_POST['title']);
+    $contact_sfid = pg_escape_string($_POST['contact_sfid']);
+    
+    $cancelEvent = cancelEvent($title, $contact_sfid);
+    
+    if ($cancelEvent) {
         ?>
         <script type="text/javascript">
-            $.notify("Subscription was Successful", 'success')
+            $.notify("Event registration cancelled successfully.", 'success');
+            setTimeout(function () {
+                window.location.href = 'events.php'
+            }, 2000);
         </script>
     <?php
     }
     else{
     ?>
         <script type="text/javascript">
-            $.notify("Subscription was not Successful", {
+            $.notify("Event registration cancellation failed.", {
                 style: 'bootstrap'
             });
         </script>
         <?php
     }
-
 }
 ?>
 </body>
