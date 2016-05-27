@@ -169,7 +169,7 @@
                             <input class="required" type="text" placeholder="Your last name" value="" name="lname"/>
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input class="required" type="password" placeholder="Your password" value="" name="password"/>
-                            <input type="tel" placeholder="Your phone" value="" name="phone"/>
+                            <input type="text" placeholder="Your phone" value="" name="phone"/>
                             <input type="text" placeholder="Your birthdate (MM/DD/YYYY)" value="" name="birthdate"/>
                             <input type="text" placeholder="Mailing Street" value="" name="mailingstreet"/>
                             <input type="text" placeholder="Mailing City" value="" name="mailingcity"/>
