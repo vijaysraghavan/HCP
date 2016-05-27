@@ -60,39 +60,6 @@
 
     <div class="blocks-container">
 
-
-        <!-- BLOCK "TYPE 11" -->
-
-        <!--div class="container">
-
-          <div class="new-block">
-
-            <div class="row page-tagline">
-
-              <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
-
-                <h2 class="title">Contact</h2>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div-->
-
-
-        <!-- BLOCK "MAP" -->
-
-        <!--div>
-
-          <div id="map-canvas" data-lat="43.653226" data-lng="-107.383184" data-zoom="7"> </div>
-
-          <div class="addresses-block"> <a data-lat="43.653226" data-lng="-107.383184" data-string="1. Here is some address or email or phone or something else..."></a> <a data-lat="57.653226" data-lng="-77.383184" data-string="2. Here is some address or email or phone or something else..."></a> </div>
-
-        </div-->
-
-
         <!-- BLOCK "TYPE 7" -->
 
         <div class="block type-7 scroll-to-block" data-id="contact">
@@ -232,35 +199,6 @@
 </div>
 
 
-<!--<div class="theme-config">
-
-        <div class="title">Select Color:</div>
-
-        <div class="colours-wrapper">
-
-            <div data-theme="theme-2" style="color: #fbc011;" class="entry active"></div>
-
-            <div data-theme="theme-2" style="color: #00bbd2;" class="entry"></div>
-
-            <div data-theme="theme-3" style="color: #4caf50;" class="entry"></div>
-
-            <div data-theme="theme-4" style="color: #ba68c8;" class="entry"></div> 
-
-            <div data-theme="theme-5" style="color: #d80d0d;" class="entry"></div>
-
-            <div data-theme="theme-6" style="color: #0045ad;" class="entry"></div>
-
-            <div data-theme="theme-7" style="color: #dd137b;" class="entry"></div>
-
-            <div data-theme="theme-8" style="color: #482d1d;" class="entry"></div>            
-
-        </div>
-
-        <div class="open"><img src="img/gear-icon.png" alt=""><img src="img/gear-icon.png" alt=""><img src="img/gear-icon.png" alt=""></div>
-
-    </div>-->
-
-
 <script src="js/jquery-2.1.3.min.js"></script>
 
 <script src="js/bootstrap.min.js"></script>
@@ -325,12 +263,10 @@ if (isset($_POST['login'])) {
         session_start();
         $_SESSION['username']=$loginUser['email'];
         $_SESSION['name']=$loginUser['name'];
+        $_SESSION['user_id']=$loginUser['id'];
         ?>
         <script type="text/javascript">
             $.notify('User signed-in successfully.', 'success');
-            /* function showPage() {
-             window.location.href='index.html';
-             } */
             
             setTimeout(
                 function () {
