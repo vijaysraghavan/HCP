@@ -349,14 +349,23 @@ include_once "functions/functions.php";
 
 if (isset($_POST['submit'])) {
     //Post Values to add
-    $name = pg_escape_string($_POST['name']);
-    $email = pg_escape_string($_POST['email']);
-    $password = pg_escape_string($_POST['password']);
-    $role = pg_escape_string($_POST['role']);
-    $about_me = pg_escape_string($_POST['text']);
+    $firstname=pg_escape_string($_POST['fname']);
+    $lastname=pg_escape_string($_POST['lname']);
+    $email=pg_escape_string($_POST['email']);
+    $password=pg_escape_string($_POST['password']);
+    $phone=pg_escape_string($_POST['phone']);
+    $dateofBirth=pg_escape_string($_POST['birthdate']);
+    $dob=date('Y-m-d',strtotime($dateofBirth));
+    $mail_street=pg_escape_string($_POST['mailingstreet']);
+    $mail_city=pg_escape_string($_POST['mailingcity']);
+    $mail_state=pg_escape_string($_POST['mailingstate']);
+    $mail_post_code=pg_escape_string($_POST['mailingpostalcode']);
+    $mailing_country=pg_escape_string($_POST['mailingcountry']);
+    $title=pg_escape_string($_POST['title']);
+    $department=pg_escape_string($_POST['department']);
 
     //Passing to Add User
-    $resultAddUser = addUser($name, $email, $password, $role, $about_me);
+    $resultAddUser = addUser($firstname, $lastname, $email, $password, $phone, $dob, $mail_street, $mail_city, $mail_city, $mail_state, $mail_post_code, $mailing_country, $title, $department);
     if ($resultAddUser) {
         ?>
         <script type="text/javascript">
