@@ -115,7 +115,7 @@
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input type="password" placeholder="Your password" value="" name="password"/>
                             <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
-                            <p style="padding-left:80px;">
+                            <p style="padding-left:100px;">
                                 <a href="#">Forgot password?</a>
                             </p>
                             
