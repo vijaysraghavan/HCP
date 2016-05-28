@@ -53,9 +53,11 @@ function registeredStatus($title, $contact_sfid)
 	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
 	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
 		
-        $resultStatus = pg_query($dbconn, "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
-        	contact__c='$contact_sfid';");
+	$query = "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
+        	contact__c='$contact_sfid';";	
+        $resultStatus = pg_query($dbconn, $query);
         $numRowsResult = pg_fetch_array($resultStatus);
+        return $query;
         	
         if($numRowsResult) {
         	return $numRowsResult;
