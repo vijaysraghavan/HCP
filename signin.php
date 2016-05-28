@@ -116,7 +116,7 @@
                             <input type="password" placeholder="Your password" value="" name="password"/>
                             <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
                             <p style="padding-left:100px;">
-                                <a href="#">Forgot password?</a>
+                                <a name="forgotpassword">Forgot password?</a>
                             </p>
                             
                             <div class="submit-wraper">
@@ -284,6 +284,35 @@ if (isset($_POST['login'])) {
         <?php
     }
 }
+
+if (isset($_POST['forgotpassword'])) {
+    //Post Values
+    $mailto = pg_escape_string($_POST['mailto']);
+    $password = getPassword($mailto);
+    
+    $subject = "Your Cintria password";
+    $message = "Your password is " + $password;
+
+    $mailstatus = mail($mailto, $subject, $message);
+    if ($mailstatus) {
+        ?>
+        <script type="text/javascript">
+            $.notify("Email sent successfully.", 'success')
+        </script>
+    <?php
+    }
+    else{
+    ?>
+        <script type="text/javascript">
+            $.notify("Sending email failed.", {
+                style: 'bootstrap'
+            });
+        </script>
+        <?php
+    }
+
+}
+
 if (isset($_POST['newsletter'])) {
     //Post Values
     $email = pg_escape_string($_POST['email']);
