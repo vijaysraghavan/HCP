@@ -136,8 +136,7 @@
                                     
                                     <?php
                                         $contact_sfid = $_SESSION['contact_sfid'];
-                                        //$status = registeredStatus('AACN National Teaching Institute & Critical Care Exposition', $contact_sfid);
-                                        $status = 1;
+                                        $status = registeredStatus('AACN National Teaching Institute & Critical Care Exposition', $contact_sfid);
                                         if ($status) {
                                     ?>
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -408,7 +407,6 @@ include_once("functions/functions.php");
 if (isset($_POST['RegisterEvent'])) {
     $title = pg_escape_string($_POST['title']);
     $contact_sfid = pg_escape_string($_POST['contact_sfid']);
-    //$contact_sfid = '0033600000EnZWVAA3';
     
     $registerEvent = registerEvent($title, $contact_sfid);
     
