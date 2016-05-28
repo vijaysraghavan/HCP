@@ -74,9 +74,9 @@ function addSamplesRequest($medicine, $contact_sfid)
 	$resultSamplesRequest = pg_query($dbconn, "INSERT INTO salesforce.samples_request__c (product__c, contact__c) 
 		VALUES('$productSfidFetched', '$contact_sfid');");
         
-        $numRowsSampleRequest = pg_affected_rows($resultAddSampleRequest);
-        if ($numRowsSampleRequest)
-            return $numRowsSampleRequest;
+        $numRowsSamplesRequest = pg_affected_rows($resultSamplesRequest);
+        if ($numRowsSamplesRequest)
+            return $numRowsSamplesRequest;
         else
             return false;
     }
