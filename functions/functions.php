@@ -50,8 +50,7 @@ function registeredStatus($title, $contact_sfid)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-    	$title2 = "AACN National Teaching Institute & Critical Care Exposition";
-	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title2';");
+	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
 	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
 		
         $resultStatus = pg_query($dbconn, "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
