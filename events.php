@@ -388,16 +388,13 @@
 include_once("functions/functions.php");
 if (isset($_POST['RegisterEvent'])) {
     $title = pg_escape_string($_POST['title']);
-    $contact_sfid = pg_escape_string($_POST['contact_sfid']);
-    //$contact_sfid = $_SESSION['contact_sfid'];
-    ?><script type="text/javascript">
-        $.notify('$contact_sfid', 'success');
-    </script><?php
+    //$contact_sfid = pg_escape_string($_POST['contact_sfid']);
+    $contact_sfid = '0033600000EnZWVAA3';
     
-    //$registerEvent = registerEvent($title, $contact_sfid);
+    $registerEvent = registerEvent($title, $contact_sfid);
     
     //Passing to Add Events
-    /*if ($registerEvent) {
+    if ($registerEvent) {
         ?>
         <script type="text/javascript">
             $.notify("Event registered successfully.", 'success');
@@ -412,7 +409,7 @@ if (isset($_POST['RegisterEvent'])) {
             });
         </script>
         <?php
-    }*/
+    }
 }
 
 if (isset($_POST['CancelEvent'])) {
