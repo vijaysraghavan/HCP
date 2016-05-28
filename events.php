@@ -174,6 +174,16 @@
                                         additive manufacturing as part of an ongoing initiative to increase the impact
                                         of 3D printing for patients worldwide.
                                     </div>
+                                    
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="registerform">
+                                        <div class="submit-wraper">
+                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
+                                            <input type="hidden" value="Building Evidence for 3D Printing in Medicine" name="title">
+                                            <div class="button">Register Event
+                                                <input type="submit" name="RegisterEvent"/>
+                                            </div>
+                                        </div>
+                                    </form>
 
                                 </div>
 
@@ -205,6 +215,16 @@
                                         ideas for business opportunities, and stay ahead of the curve to position
                                         yourself for long-term success.
                                     </div>
+                                    
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="registerform">
+                                        <div class="submit-wraper">
+                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
+                                            <input type="hidden" value="AHDI Annual Conference" name="title">
+                                            <div class="button">Register Event
+                                                <input type="submit" name="RegisterEvent"/>
+                                            </div>
+                                        </div>
+                                    </form>
 
                                 </div>
 
@@ -237,6 +257,16 @@
                                         our specialty. But there is one thing you can count on being the same – the best
                                         emergency medicine education in the world.
                                     </div>
+                                    
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="registerform">
+                                        <div class="submit-wraper">
+                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
+                                            <input type="hidden" value="ACEP Scientific Assembly" name="title">
+                                            <div class="button">Register Event
+                                                <input type="submit" name="RegisterEvent"/>
+                                            </div>
+                                        </div>
+                                    </form>
 
                                 </div>
 
@@ -269,6 +299,16 @@
                                         new mission and strategy to achieve personal connected health for all, this
                                         year’s Connected Health Conference will be like none before it.
                                     </div>
+                                    
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="registerform">
+                                        <div class="submit-wraper">
+                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
+                                            <input type="hidden" value="PCHA 2016 Connected Health Conference" name="title">
+                                            <div class="button">Register Event
+                                                <input type="submit" name="RegisterEvent"/>
+                                            </div>
+                                        </div>
+                                    </form>
 
                                 </div>
 
