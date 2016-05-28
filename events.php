@@ -136,7 +136,8 @@
                                     
                                     <?php
                                         $contact_sfid = $_SESSION['contact_sfid'];
-                                        if (registeredStatus("AACN National Teaching Institute & Critical Care Exposition", $contact_sfid)) {
+                                        $title = "AACN National Teaching Institute & Critical Care Exposition";
+                                        if (registeredStatus($title, $contact_sfid)) {
                                     ?>
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                         <div class="submit-wraper">
