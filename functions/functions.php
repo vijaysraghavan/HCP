@@ -51,7 +51,8 @@ function registeredStatus($title, $contact_sfid)
     global $dbconn;
     if ($connect = dbConnect()) {
 		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		$eventSfid = pg_exec($dbconn, $queryString1);
+		//$eventSfid = pg_exec($dbconn, $queryString1);
+		$eventSfid = 'a0036000004QIj7AAG';
 		
         $queryString2 = "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfid' AND contact__c='$contact_sfid';";
         $resultStatus = pg_exec($dbconn, $queryString2);
