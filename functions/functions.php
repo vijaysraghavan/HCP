@@ -46,25 +46,6 @@ function loginUser($email, $password)
     }
 }
 
-function registeredStatus($title, $contact_sfid)
-{
-    global $dbconn;
-    if ($connect = dbConnect()) {
-	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
-	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
-		
-        $resultStatus = pg_query($dbconn, "SELECT id FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
-        	contact__c='$contact_sfid';");
-        
-        $numRowsResult = pg_fetch_array($resultStatus, 0, 0);
-        if ($numRowsResult != null && (int)$numRowsResult > 0)
-            return 1;
-        else
-            return 0;
-    }
-}
-
-
 function registerEvent($title, $contact_sfid)
 {
     global $dbconn;
@@ -80,6 +61,42 @@ function registerEvent($title, $contact_sfid)
             return $numRowsResult;
         else
             return false;
+    }
+}
+
+function addSamplesRequest($medicine, $contact_sfid)
+{
+    global $dbconn;
+    if ($connect = dbConnect()) {
+    	$productSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.product2 WHERE family='Medical' AND name='$medicine';");
+	$productSfidFetched = pg_fetch_result($productSfid, 0, 0);
+	
+	$resultSamplesRequest = pg_query($dbconn, "INSERT INTO salesforce.samples_request__c (product__c, contact__c) 
+		VALUES('$productSfidFetched', '$contact_sfid');");
+        
+        $numRowsSampleRequest = pg_affected_rows($resultAddSampleRequest);
+        if ($numRowsSampleRequest)
+            return $numRowsSampleRequest;
+        else
+            return false;
+    }
+}
+
+/*function registeredStatus($title, $contact_sfid)
+{
+    global $dbconn;
+    if ($connect = dbConnect()) {
+	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
+	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
+		
+        $resultStatus = pg_query($dbconn, "SELECT id FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
+        	contact__c='$contact_sfid';");
+        
+        $numRowsResult = pg_fetch_array($resultStatus, 0, 0);
+        if ($numRowsResult != null && (int)$numRowsResult > 0)
+            return 1;
+        else
+            return 0;
     }
 }
 
@@ -99,37 +116,9 @@ function cancelEvent($title, $contact_sfid)
         else
             return false;
     }
-}
+}*/
 
-/*function addEvents($name, $email, $phone, $event, $questions)
-{
-    global $dbconn;
-    if ($connect = dbConnect()) {
-        $resultAddEvents = pg_query($dbconn, "INSERT INTO salesforce.events__c(name, your_email__c, your_phone__c,select_event__c,your_questions__c)
-                  VALUES('$name','$email','$phone','$event','$questions');");
-        $numRowsEvents = pg_affected_rows($resultAddEvents);
-        if ($numRowsEvents)
-            return $numRowsEvents;
-        else
-            return false;
-    }
-}
-
-function addSampleRequest($name, $email, $phone, $medicine)
-{
-    global $dbconn;
-    if ($connect = dbConnect()) {
-        $resultAddSampleRequest = pg_query($dbconn, "INSERT INTO salesforce.sample_request__c(name, your_email__c, your_phone__c,select_a_medicine__c)
-                  VALUES('$name','$email','$phone','$medicine');");
-        $numRowsSampleRequest = pg_affected_rows($resultAddSampleRequest);
-        if ($numRowsSampleRequest)
-            return $numRowsSampleRequest;
-        else
-            return false;
-    }
-}
-
-function addLiteratureRequest($name, $email, $phone, $medicine, $additional_notes)
+/*function addLiteratureRequest($name, $email, $phone, $medicine, $additional_notes)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
