@@ -82,6 +82,24 @@ function addSamplesRequest($medicine, $contact_sfid)
     }
 }
 
+function addLiteratureRequest($medicine, $contact_sfid)
+{
+    global $dbconn;
+    if ($connect = dbConnect()) {
+    	$productSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.product2 WHERE family='Medical' AND name='$medicine';");
+	$productSfidFetched = pg_fetch_result($productSfid, 0, 0);
+	
+	$resultLiteratureRequest = pg_query($dbconn, "INSERT INTO salesforce.literature_request__c (product__c, contact__c) 
+		VALUES('$productSfidFetched', '$contact_sfid');");
+		
+        $numRowsLiteratureRequest = pg_affected_rows($resultLiteratureRequest);
+        if ($numRowsLiteratureRequest)
+            return $numRowsLiteratureRequest;
+        else
+            return false;
+    }
+}
+
 /*function registeredStatus($title, $contact_sfid)
 {
     global $dbconn;
@@ -115,17 +133,6 @@ function cancelEvent($title, $contact_sfid)
             return $numRowsResult;
         else
             return false;
-    }
-}*/
-
-/*function addLiteratureRequest($name, $email, $phone, $medicine, $additional_notes)
-{
-    global $dbconn;
-    if ($connect = dbConnect()) {
-        $resultAddLiteratureRequest = pg_query($dbconn, "INSERT INTO salesforce.literature_request__c(name, your_email__c, your_phone__c,select_a_medicine__c,additional_notes__c)
-                  VALUES('$name','$email','$phone','$medicine','$additional_notes');");
-        $numRowsLiteratureRequest = pg_affected_rows($resultAddLiteratureRequest);
-        return $numRowsLiteratureRequest;
     }
 }
 
