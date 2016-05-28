@@ -69,11 +69,8 @@ function registerEvent($title, $contact_sfid)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-	$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-	$eventSfid = pg_execute($dbconn, $queryString1);
-		
-        $queryString2 = "INSERT INTO salesforce.registered_events__c (event__c, contact__c) VALUES('$eventSfid', '$contact_sfid');";        
-	$resultRegisterEvent = pg_query($dbconn, $queryString2);
+	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
+	$resultRegisterEvent = pg_query($dbconn, "INSERT INTO salesforce.registered_events__c (event__c, contact__c) VALUES('$eventSfid', '$contact_sfid');");
 		
         $numRowsResult = pg_affected_rows($resultRegisterEvent);
         if ($numRowsResult)
