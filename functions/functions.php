@@ -50,11 +50,11 @@ function registeredStatus($title, $contact_sfid)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		$eventSfid = pg_exec($dbconn, $queryString1);
+	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
+	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
 		
-        $queryString2 = "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfid' AND contact__c='$contact_sfid';";
-        $resultStatus = pg_exec($dbconn, $queryString2);
+        $resultStatus = pg_query($dbconn, "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
+        	contact__c='$contact_sfid';");
         
 	$numRowsResult = pg_fetch_array($resultStatus);
         if ($numRowsResult)
@@ -71,6 +71,7 @@ function registerEvent($title, $contact_sfid)
     if ($connect = dbConnect()) {
 	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
 	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
+	
 	$resultRegisterEvent = pg_query($dbconn, "INSERT INTO salesforce.registered_events__c (event__c, contact__c) 
 		VALUES('$eventSfidFetched', '$contact_sfid');");
 		
@@ -86,13 +87,13 @@ function cancelEvent($title, $contact_sfid)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
-		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		$eventSfid = pg_exec($dbconn, $queryString1);
+	$eventSfid = pg_query($dbconn, "SELECT sfid FROM salesforce.event__c WHERE name='$title';");
+	$eventSfidFetched = pg_fetch_result($eventSfid, 0, 0);
 		
-        $queryString2 = "DELETE FROM salesforce.registered_events__c WHERE event__c='$eventSfid' AND contact__c='$contact_sfid';";
-        $resultDeleteEvent = pg_query($dbconn, $queryString2);
+        $resultDeleteEvent = pg_query($dbconn, "DELETE FROM salesforce.registered_events__c WHERE event__c='$eventSfidFetched' AND 
+        	contact__c='$contact_sfid';");
         
-		$numRowsResult = pg_affected_rows($resultDeleteEvent);
+	$numRowsResult = pg_affected_rows($resultDeleteEvent);
         if ($numRowsResult)
             return $numRowsResult;
         else
