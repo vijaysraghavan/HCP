@@ -134,23 +134,6 @@
                                         impact at the bedside.
                                     </div>
                                     
-                                    <?php
-                                        $contact_sfid = $_SESSION['contact_sfid'];
-                                        $title = "AACN National Teaching Institute & Critical Care Exposition";
-                                        if (registeredStatus($title, $contact_sfid) > 0) {
-                                    ?>
-                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                        <div class="submit-wraper">
-                                            <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
-                                            <input type="hidden" value="AACN National Teaching Institute & Critical Care Exposition" name="title">
-                                            <div class="button">Cancel Event
-                                                <input type="submit" name="CancelEvent"/>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <?php } else {
-                                        $contact_sfid = $_SESSION['contact_sfid'];
-                                    ?>
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="registerform">
                                         <div class="submit-wraper">
                                             <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
@@ -160,7 +143,6 @@
                                             </div>
                                         </div>
                                     </form>
-                                    <?php } ?>
                                     
                                 </div>
 
