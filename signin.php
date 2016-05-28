@@ -115,7 +115,13 @@
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input type="password" placeholder="Your password" value="" name="password"/>
                             <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
-                            <input type="text" placeholder="Forgot password?" value="" name="forgotpassword" href="#"/>
+                            <table alingn="right">
+                                <row>
+                                    <col>
+                                        <a>Forgot password?</a>
+                                    </col>
+                                </row>
+                            </table>
                             
                             <div class="submit-wraper">
                                 <div class="button">Sign In
