@@ -113,22 +113,16 @@
                         <form class="login-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
-
                             <input type="password" placeholder="Your password" value="" name="password"/>
+                            <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
                             
-                            <a href="#">Forgot password</a>
-
                             <div class="submit-wraper">
-
                                 <div class="button">Sign In
-
+                                    <a href="#">Forgot password</a>
                                     <input type="submit" value="" name="login"/>
-
                                 </div>
 
                             </div>
-
-                            <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
 
                         </form>
 
