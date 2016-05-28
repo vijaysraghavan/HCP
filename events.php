@@ -391,14 +391,13 @@ if (isset($_POST['RegisterEvent'])) {
     $contact_sfid = pg_escape_string($_POST['contact_sfid']);
     //$contact_sfid = $_SESSION['contact_sfid'];
     <script type="text/javascript">
-        alert("$contact_sfid="+$contact_sfid+"=");
+        $.alert("$contact_sfid="+$contact_sfid+"=");
     </script>
     
     //$registerEvent = registerEvent($title, $contact_sfid);
-    $registerEvent = 0;
     
     //Passing to Add Events
-    if ($registerEvent) {
+    /*if ($registerEvent) {
         ?>
         <script type="text/javascript">
             $.notify("Event registered successfully.", 'success');
@@ -413,7 +412,7 @@ if (isset($_POST['RegisterEvent'])) {
             });
         </script>
         <?php
-    }
+    }*/
 }
 
 if (isset($_POST['CancelEvent'])) {
