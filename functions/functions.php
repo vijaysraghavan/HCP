@@ -51,10 +51,9 @@ function registeredStatus($title, $contact_sfid)
     global $dbconn;
     if ($connect = dbConnect()) {
 		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		//$eventSfid = pg_exec($dbconn, $queryString1);
-		$eventSfid = 'a0036000004QIj7AAG';
+		$eventSfid = pg_exec($dbconn, $queryString1);
 		
-        $queryString2 = "SELECT * FROM salesforce.registered_events__c WHERE event__c='a0036000004QIj7AAG' AND contact__c='$contact_sfid';";
+        $queryString2 = "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfid' AND contact__c='$contact_sfid';";
         $resultStatus = pg_exec($dbconn, $queryString2);
         
 		$numRowsResult = pg_fetch_array($resultStatus);
@@ -72,8 +71,9 @@ function registerEvent($title, $contact_sfid)
     if ($connect = dbConnect()) {
 		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
 		$eventSfid = pg_exec($dbconn, $queryString1);
+		//$eventSfid = 'a0036000004QIj7AAG';
 		
-        $queryString2 = "INSERT INTO salesforce.registered_events__c (event__c, contact__c) VALUES('$eventSfid', '$contact_sfid');";        
+        $queryString2 = "INSERT INTO salesforce.registered_events__c (event__c, contact__c) VALUES('a0036000004QIj7AAG', '$contact_sfid');";        
 		$resultRegisterEvent = pg_query($dbconn, $queryString2);
 		
         $numRowsResult = pg_affected_rows($resultRegisterEvent);
