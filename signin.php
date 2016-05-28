@@ -115,8 +115,8 @@
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input type="password" placeholder="Your password" value="" name="password"/>
                             <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
-                            <a href="#">Forgot password</a>
-                            <div class="description">One account is all you need</div>
+                            <input type="text" placeholder="Forgot password?" value="" name="forgotpassword" href="#"/>
+                            
                             <div class="submit-wraper">
                                 <div class="button">Sign In
                                     <input type="submit" value="" name="login"/>
