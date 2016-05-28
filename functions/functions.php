@@ -51,10 +51,10 @@ function registeredStatus($title, $contact_sfid)
     global $dbconn;
     if ($connect = dbConnect()) {
 		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		$eventSfid = pg_query($dbconn, $queryString1);
+		$eventSfid = pg_exec($dbconn, $queryString1);
 		
         $queryString2 = "SELECT * FROM salesforce.registered_events__c WHERE event__c='$eventSfid' AND contact__c='$contact_sfid';";
-        $resultStatus = pg_query($dbconn, $queryString2);
+        $resultStatus = pg_exec($dbconn, $queryString2);
         
 		$numRowsResult = pg_fetch_array($resultStatus);
         if ($numRowsResult)
@@ -70,7 +70,7 @@ function registerEvent($title, $contact_sfid)
     global $dbconn;
     if ($connect = dbConnect()) {
 		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		$eventSfid = pg_query($dbconn, $queryString1);
+		$eventSfid = pg_exec($dbconn, $queryString1);
 		
         $queryString2 = "INSERT INTO salesforce.registered_events__c (event__c, contact__c) VALUES('$eventSfid', '$contact_sfid');";        
 		$resultRegisterEvent = pg_query($dbconn, $queryString2);
@@ -88,7 +88,7 @@ function cancelEvent($title, $contact_sfid)
     global $dbconn;
     if ($connect = dbConnect()) {
 		$queryString1 = "SELECT sfid FROM salesforce.event__c WHERE name='$title';";
-		$eventSfid = pg_query($dbconn, $queryString1);
+		$eventSfid = pg_exec($dbconn, $queryString1);
 		
         $queryString2 = "DELETE FROM salesforce.registered_events__c WHERE event__c='$eventSfid' AND contact__c='$contact_sfid';";
         $resultDeleteEvent = pg_query($dbconn, $queryString2);
