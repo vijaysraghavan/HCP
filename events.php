@@ -137,9 +137,9 @@
                                     <?php
                                         $contact_sfid = $_SESSION['contact_sfid'];
                                         $status = registeredStatus('AACN National Teaching Institute & Critical Care Exposition', $contact_sfid);
-                                        if ($status) {
+                                        if ($status['status'] == 1) {
                                     ?>
-                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="cancelform">
                                         <div class="submit-wraper">
                                             <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
                                             <input type="hidden" value="AACN National Teaching Institute & Critical Care Exposition" name="title">
@@ -151,7 +151,7 @@
                                     <?php } else {
                                         $contact_sfid = $_SESSION['contact_sfid'];
                                     ?>
-                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="registerform">
                                         <div class="submit-wraper">
                                             <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
                                             <input type="hidden" value="AACN National Teaching Institute & Critical Care Exposition" name="title">
