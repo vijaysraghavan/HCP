@@ -58,7 +58,7 @@ function registeredStatus($title, $contact_sfid)
         
 	$numRowsResult = pg_fetch_array($resultStatus);
         if ($numRowsResult)
-            return $numRowsResult;
+            return true;
         else
             return false;
     }
