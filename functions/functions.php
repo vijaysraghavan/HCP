@@ -58,6 +58,8 @@ function registerEvent($title, $contact_sfid)
         $numRowsResult = pg_fetch_array($resultStatus);
         	
         if($numRowsResult) {	
+		return false;
+	} else {
 		$resultRegisterEvent = pg_query($dbconn, "INSERT INTO salesforce.registered_events__c (event__c, contact__c) 
 			VALUES('$eventSfidFetched', '$contact_sfid');");
 		
@@ -66,8 +68,6 @@ function registerEvent($title, $contact_sfid)
 	            return $numRowsResult;
 	        else
 	            return false;
-	} else {
-		return false;
 	}
     }
 }
