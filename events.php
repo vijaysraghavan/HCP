@@ -137,7 +137,7 @@
                                     <?php
                                         $contact_sfid = $_SESSION['contact_sfid'];
                                         $status = registeredStatus('AACN National Teaching Institute & Critical Care Exposition', $contact_sfid);
-                                        echo "<pre>": print_r ($status); exit;
+                                        echo "<pre>"; print_r ($status); exit;
                                         if ($status) {
                                     ?>
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
