@@ -122,7 +122,7 @@
                                         <img class="thumbnail-image" src="img/NTI.jpg" height="493" width="370" alt=""/>
                                     </div>
 
-                                    <div class="name">AACN's National Teaching Institute & Critical Care Exposition
+                                    <div class="name">AACN National Teaching Institute & Critical Care Exposition
                                     </div>
 
                                     <div class="position">New Orleans, LA: May 16 – 19, 2016</div>
@@ -137,7 +137,7 @@
                                     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="events">
                                         <div class="submit-wraper">
                                             <input type="hidden" value="<?php echo $_SESSION['contact_sfid']; ?>" name="contact_sfid">
-                                            <input type="hidden" value="AACN's National Teaching Institute & Critical Care Exposition" name="title">
+                                            <input type="hidden" value="AACN National Teaching Institute & Critical Care Exposition" name="title">
                                             <div class="button">Register Event
                                                 <input type="submit" name="RegisterEvent"/>
                                             </div>
@@ -259,7 +259,7 @@
                                         <img class="thumbnail-image" src="img/chc.png" height="493" width="370" alt=""/>
                                     </div>
 
-                                    <div class="name">PCHA's 2016 Connected Health Conference</div>
+                                    <div class="name">PCHA 2016 Connected Health Conference</div>
 
                                     <div class="position">National Harbor, MD: Dec 11 – 14, 2016</div>
 
