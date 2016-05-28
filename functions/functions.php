@@ -46,7 +46,21 @@ function loginUser($email, $password)
     }
 }
 
-function registeredStatus($title, $contact_sfid)
+function getPassword($email)
+{
+    global $dbconn;
+    if ($connect = dbConnect()) {
+        $resultGetPassword = pg_query($dbconn, "SELECT password__c FROM salesforce.contact WHERE email='$email';");
+        $resultGetPasswordFetched = pg_fetch_result($resultGetPassword, 0, 0);
+        
+        if($resultGetPasswordFetched)
+        	return $resultGetPasswordFetched;
+	else
+		return false;
+    }
+}
+
+/*function registeredStatus($title, $contact_sfid)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
@@ -65,7 +79,7 @@ function registeredStatus($title, $contact_sfid)
         	return false;
         }
     }
-}
+}*/
 
 function registerEvent($title, $contact_sfid)
 {
