@@ -390,9 +390,9 @@ if (isset($_POST['RegisterEvent'])) {
     $title = pg_escape_string($_POST['title']);
     $contact_sfid = pg_escape_string($_POST['contact_sfid']);
     //$contact_sfid = $_SESSION['contact_sfid'];
-    <script type="text/javascript">
+    ?><script type="text/javascript">
         $.alert("$contact_sfid="+$contact_sfid+"=");
-    </script>
+    </script><?php
     
     //$registerEvent = registerEvent($title, $contact_sfid);
     
