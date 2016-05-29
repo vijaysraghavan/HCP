@@ -143,6 +143,24 @@ function addLiteratureRequest($medicine, $contact_sfid)
     }
 }
 
+function getCaseDetails($sfid){
+    global $dbconn;
+    if ($connect = dbConnect()) {
+        $sqlDetails="SELECT * FROM salesforce.case WHERE contactid='$sfid';";
+        $resultDetails = pg_exec($dbconn, $sqlDetails);
+        if ($resultDetails) {
+            while($resultRows = pg_fetch_array($resultDetails)){
+                $rows[]=$resultRows;
+            }
+            if($rows)
+                return $rows;
+            else {
+                return false;
+            }
+        }
+    }
+}
+
 /*
 function cancelEvent($title, $contact_sfid)
 {
