@@ -157,7 +157,7 @@
                                 </thead>
                                 <tbody>
                                 <?php
-                                $results = getCaseDetails();
+                                $results = getCaseDetails($_SESSION['contact_sfid']);
                                 $i = 1;
 
 
