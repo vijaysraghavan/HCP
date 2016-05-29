@@ -148,11 +148,14 @@
                                 <thead>
                                 <tr>
                                     <th>S.No</th>
-                                    <th>Name</th>
+                                    <th>Case Number</th>
                                     <th>Type</th>
-                                    <th>Desc</th>
+                                    <th>Reason</th>
+                                    <th>Subject</th>
+                                    <th>Description</th>
                                     <th>Date</th>
-                                    <th>Name</th>
+                                    <th>Status</th>
+                                    <th>Priority</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -169,11 +172,14 @@
                                     ?>
                                     <tr class=<?php echo $class; ?>>
                                         <td><?php echo $i; ?></td>
-                                        <td><?php echo $result['case_name']; ?></td>
-                                        <td><?php echo $result['case_type']; ?></td>
-                                        <td><?php echo $result['case_desc']; ?></td>
-                                        <td><?php echo date('d-m-Y', strtotime($result['case_date'])); ?></td>
-                                        <td><?php echo $result['case_name']; ?></td>
+                                        <td><?php echo $result['casenumber']; ?></td>
+                                        <td><?php echo $result['type']; ?></td>
+                                        <td><?php echo $result['reason']; ?></td>
+                                        <td><?php echo $result['subject']; ?></td>
+                                        <td><?php echo $result['description']; ?></td>
+                                        <td><?php echo date('d-m-Y', strtotime($result['createddate'])); ?></td>
+                                        <td><?php echo $result['status']; ?></td>
+                                        <td><?php echo $result['priority']; ?></td>
                                     </tr>
                                     <?php
                                     $i++;
