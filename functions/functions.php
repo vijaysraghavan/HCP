@@ -146,8 +146,7 @@ function addLiteratureRequest($medicine, $contact_sfid)
 function getCaseDetails($sfid){
     global $dbconn;
     if ($connect = dbConnect()) {
-        $sqlDetails="SELECT * FROM salesforce.case WHERE contactid='$sfid';";
-        $resultDetails = pg_exec($dbconn, $sqlDetails);
+        $resultDetails = pg_query($dbconn, "SELECT * FROM salesforce.case WHERE contactid='$sfid';");
         if ($resultDetails) {
             while($resultRows = pg_fetch_array($resultDetails)){
                 $rows[]=$resultRows;
