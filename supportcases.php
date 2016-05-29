@@ -144,39 +144,43 @@
 
                     <div class="col-md-7 col-md-offset-1 wow fadeInRight" data-wow-delay="0.3s">
 
-                        <!--form class="signup1-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-
-                            <input class="required" type="text" placeholder="Your first name" value="" name="fname"/>
-                            <input class="required" type="text" placeholder="Your last name" value="" name="lname"/>
-                            <input class="required" type="text" placeholder="Your email" value="" name="email"/>
-                            <input class="required" type="password" placeholder="Your password" value="" name="password"/>
-                            <input type="tel" placeholder="Your phone" value="" name="phone"/>
-                            <input type="text" placeholder="Your birthdate (MM/DD/YYYY)" value="" name="birthdate"/>
-                            <input type="text" placeholder="Mailing Street" value="" name="mailingstreet"/>
-                            <input type="text" placeholder="Mailing City" value="" name="mailingcity"/>
-                            <input type="text" placeholder="Mailing State" value="" name="mailingstate"/>
-                            <input type="text" placeholder="Mailing Postal Code" value="" name="mailingpostalcode"/>
-                            <input type="text" placeholder="Mailing Country" value="" name="mailingcountry"/>
-                            <select name="title">
-                                <option>Title</option>
-                                <option>Physician</option>
-                                <option>Nurse</option>
-                                <option>Pharmacist</option>
-                            </select>
-                            <input type="text" placeholder="Department" value="" name="department"/>
-
-                            <div class="submit-wraper">
-                                <div class="button">create account
-                                    <input type="submit" value="" name="submit"/>
-                                </div>
-                            </div>
+                        <table class="table table table-striped table-bordered table-condensed" id="datatable">
+                                <thead>
+                                <tr>
+                                    <th>S.No</th>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Desc</th>
+                                    <th>Date</th>
+                                    <th>Name</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <?php
+                                $results = getCaseDetails();
+                                $i = 1;
 
 
-                        </form-->
-
-                        <!-- <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" /> -->
-
-
+                                foreach ($results as $result) {
+                                    if ($i % 2 == 0)
+                                        $class = "success";
+                                    else
+                                        $class = "active";
+                                    ?>
+                                    <tr class=<?php echo $class; ?>>
+                                        <td><?php echo $i; ?></td>
+                                        <td><?php echo $result['case_name']; ?></td>
+                                        <td><?php echo $result['case_type']; ?></td>
+                                        <td><?php echo $result['case_desc']; ?></td>
+                                        <td><?php echo date('d-m-Y', strtotime($result['case_date'])); ?></td>
+                                        <td><?php echo $result['case_name']; ?></td>
+                                    </tr>
+                                    <?php
+                                    $i++;
+                                }
+                                ?>
+                                </tbody>
+                            </table>
                     </div>
 
                     <div class="form-popup">
