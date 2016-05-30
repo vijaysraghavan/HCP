@@ -114,9 +114,9 @@
 
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input type="password" placeholder="Your password" value="" name="password"/>
-                            <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" />
+                            <!--input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" /-->
                             <p style="padding-left:100px;">
-                                <a name="forgotpassword">Forgot password?</a>
+                                <a name="forgotpassword" href="javascript:window.open('fpass.php','Forgot password','width=500,height=150')">Forgot password?</a>
                             </p>
                             
                             <div class="submit-wraper">
