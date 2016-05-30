@@ -42,7 +42,6 @@
             /*  margin: -7px -133px;*/
             float: right;
         }
-
     </style>
 -->
 </head>
@@ -56,7 +55,10 @@
 <header class="act default-act"> <a href="index.php" id="logo"><img src="img/theme-2/Cintria-Logo.png" alt=""/><img class="act" src="img/theme-2/Cintria-Logo.png" alt=""/></a>
 
   <div class="mob-icon"> <span></span> </div>
-    <?php session_start();if(isset($_SESSION['name'])){?>
+    <?php 
+	include_once("functions/functions.php");
+
+	session_start();if(isset($_SESSION['name'])){?>
         <div style="float:right;color:#fff;font-size:11px;font-weight:bold;margin-right:6%;margin-top:5px;background:rgb(26, 103, 189) none repeat scroll 0%;border:1px solid rgb(26, 103, 189) none repeat scroll 0%;height:17px;border-radius:20px;padding:3px;width:188px;" ><?php echo "Welcome "." ".$_SESSION['name'];  ?></div>
     <?php }?>
   <nav>
@@ -162,8 +164,6 @@
                                 <?php
                                 $results = getCaseDetails($_SESSION['contact_sfid']);
                                 $i = 1;
-
-
                                 foreach ($results as $result) {
                                     if ($i % 2 == 0)
                                         $class = "success";
@@ -254,31 +254,18 @@
 
 
 <!--<div class="theme-config">
-
         <div class="title">Select Color:</div>
-
         <div class="colours-wrapper">
-
             <div data-theme="theme-2" style="color: #fbc011;" class="entry active"></div>
-
             <div data-theme="theme-2" style="color: #00bbd2;" class="entry"></div>
-
             <div data-theme="theme-3" style="color: #4caf50;" class="entry"></div>
-
             <div data-theme="theme-4" style="color: #ba68c8;" class="entry"></div> 
-
             <div data-theme="theme-5" style="color: #d80d0d;" class="entry"></div>
-
             <div data-theme="theme-6" style="color: #0045ad;" class="entry"></div>
-
             <div data-theme="theme-7" style="color: #dd137b;" class="entry"></div>
-
             <div data-theme="theme-8" style="color: #482d1d;" class="entry"></div>            
-
         </div>
-
         <div class="open"><img src="img/gear-icon.png" alt=""><img src="img/gear-icon.png" alt=""><img src="img/gear-icon.png" alt=""></div>
-
     </div>--> 
 
 
@@ -298,50 +285,30 @@
 <script src="js/wow.min.js"></script> 
 
 <script>
-
         var wow = new WOW(
-
             {
-
                 boxClass:     'wow',      // animated element css class (default is wow)
-
                 animateClass: 'animated', // animation css class (default is animated)
-
                 offset:       100,          // distance to the element when triggering the animation (default is 0)
-
                 mobile:       true,       // trigger animations on mobile devices (default is true)
-
                 live:         true,       // act on asynchronously loaded content (default is true)
-
                 callback:     function(box) {
-
                   // the callback is fired every time an animation is started
-
                   // the argument that is passed in is the DOM node being animated
-
                 }
-
             }
-
         );
-
         $(window).load(function(){
-
             wow.init();    
-
         });
-
         
-
     </script> 
 <script type="text/javascript" src="js/notify.js"></script>
 <!--<script src="js/subscription.js"></script>-->
 <?php
-include_once("functions/functions.php");
 if (isset($_POST['newsletter'])) {
   //Post Values
   $email = pg_escape_string($_POST['email']);
-
   //Passing values
   $addNewsLetter = addNewsLetter($email);
   if ($addNewsLetter) {
@@ -360,11 +327,9 @@ if (isset($_POST['newsletter'])) {
     </script>
     <?php
   }
-
 }
 ?>
 ?>
 </body>
 
 </html>
-
