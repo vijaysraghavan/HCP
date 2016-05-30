@@ -50,65 +50,7 @@
 
         </form>
 
-        <!-- BLOCK "TYPE 7" -->
-
-        <div class="block type-7 scroll-to-block" data-id="contact">
-
-            <div class="container">
-
-                <div class="row page-tagline">
-
-                    <div class="col-md-6 col-md-offset-3 wow flipInX" data-wow-delay="0.3s">
-
-                        <h2 class="title">sign In</h2>
-
-                        <div class="description">One account is all you need</div>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-md-7 col-md-offset-1 wow fadeInRight" data-wow-delay="0.3s">
-
-                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-
-                            <input class="required" type="text" placeholder="Your email" value="" name="email"/>
-                            <input type="password" placeholder="Your password" value="" name="password"/>
-                            
-                            <p style="padding-left:100px;">
-                                <a name="forgotpassword" href="javascript:window.open('fpass.php','Forgot password','width=500,height=150')">Forgot password?</a>
-                            </p>
-                            
-                            <div class="submit-wraper">
-                                <div class="button">Sign In
-                                    <input type="submit" value="" name="login"/>
-                                </div>
-
-                            </div>
-
-                        </form>
-
-                    </div>
-
-                    <div class="form-popup">
-
-                        <div class="form-popup-close-layer"></div>
-
-                        <div class="form-popup-content">
-
-                            <div class="text">Lorem Ipsum Dollor Sit Ammet consectetur dim Elit</div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
+        
 </div>
 
 
