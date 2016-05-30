@@ -1,5 +1,5 @@
 <?php
-	<form class="login-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+	<form class="login-form" method="post">
 	
 	    <input class="required" type="text" placeholder="Your email" value="" name="email"/>
 	    
