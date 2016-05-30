@@ -42,8 +42,8 @@
             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
             
             <div class="submit-wraper">
-                <div class="button">Sign In
-                    <input type="submit" value="" name="login"/>
+                <div class="button">Email password
+                    <input type="submit" value="" name="emailpassword"/>
                 </div>
 
             </div>
@@ -107,58 +107,27 @@
 <?php
 include_once "functions/functions.php";
 
-if (isset($_POST['login'])) {
+if (isset($_POST['emailpassword'])) {
 
-    $userEmail = pg_escape_string($_POST['email']);
-    $userPassword = pg_escape_string($_POST['password']);
-
-    //Login Check
-    $loginUser = loginUser($userEmail, $userPassword);
-    if ($loginUser) {
-        session_start();
-        $_SESSION['username']=$loginUser['email'];
-        $_SESSION['name']=$loginUser['name'];
-        $_SESSION['contact_sfid']=$loginUser['sfid'];
-        ?>
-        <script type="text/javascript">
-            $.notify('User signed-in successfully.', 'success');
-            
-            setTimeout(
-                function () {
-                    window.location.href = 'index.php'
-                }, 2000);
-
-        </script>
-    <?php
-    }
-    else{
-    ?>
-        <script type="text/javascript">
-            $.notify('User sign-in failed.', {
-                style: 'bootstrap'
-            });
-        </script>
-        <?php
-    }
-}
-
-if (isset($_POST['newsletter'])) {
     //Post Values
-    $email = pg_escape_string($_POST['email']);
+    $mailto = pg_escape_string($_POST['email']);
+    $password = getPassword($mailto);
+    
+    $subject = "Your Cintria password";
+    $message = "Your password is " + $password;
 
-    //Passing values
-    $addNewsLetter = addNewsLetter($email);
-    if ($addNewsLetter) {
+    $mailstatus = mail($mailto, $subject, $message);
+    if ($mailstatus) {
         ?>
         <script type="text/javascript">
-            $.notify("Subscription was Successful", 'success')
+            $.notify("Email sent successfully.", 'success')
         </script>
     <?php
     }
     else{
     ?>
         <script type="text/javascript">
-            $.notify("Subscription was not Successful", {
+            $.notify("Sending email failed.", {
                 style: 'bootstrap'
             });
         </script>
