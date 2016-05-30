@@ -1,15 +1,17 @@
 <?php
-	<form class="login-form" method="post">
+	<form method='post' action='sendemail.php' >
+	    <label>Name</label>
+	    <input name="name" placeholder="Type Here">
+	    <label>Email</label>
+	    <input name="email" placeholder="Type Here" id="email">
+	    <label>Message</label>
+	    <textarea name="message" placeholder="Type Here"></textarea>
 	
-	    <input class="required" type="text" placeholder="Your email" value="" name="email"/>
-	    
-	    <div class="submit-wraper">
-	        <div class="button">Sign In
-	            <input type="submit" value="" name="forgotpassword"/>
-	        </div>
 	
-	    </div>
-	
+	    <label>Human Verification</label>
+	      <input name="human" placeholder="2 + 2 = ? " id="human">
+	      <input id="submit" name="submit" type="submit" value="Submit">
+	    </label>     
 	</form>
         
         
