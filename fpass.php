@@ -31,29 +31,6 @@
 <body data-theme="theme-2">
 
 
-<!-- HEADER -->
-
-<header class="act default-act"><a href="index.php" id="logo"><img src="img/theme-2/Cintria-Logo.png" alt=""/><img class="act"
-                                                                                                           src="img/theme-2/Cintria-Logo.png"
-                                                                                                           alt=""/></a>
-
-    <div class="mob-icon"><span></span></div>
-
-    <nav>
-
-        <ul>
-
-            <li><a href="index.php">Overview</a></li>
-            <li><a href="signup.php">Sign Up</a></li>
-            <li><a href="signin.php" class="act">Sign In</a></li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-
 <!-- LOADER -->
 
 <div id="content-wrapper">
@@ -147,53 +124,6 @@
             </div>
 
         </div>
-
-
-        <!-- FOOTER -->
-
-        <footer>
-
-            <div class="subscribe"><span class="subscribe-text">Stay informed our updates</span>
-
-                <form class="subscribe-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-
-                    <input type="email" placeholder="Enter your email" name="email" required/>
-
-                    <input type="submit" value="" name="newsletter"/>
-
-                </form>
-
-            </div>
-
-            <div class="footer-bottom">
-
-                <div class="footer-linck"><a href="#">Privacy Policy</a> <a href="#">About Us </a> <a
-                        href="#">Support</a> <a href="#">FAQ</a> <a href="#">Blog</a> <a href="#">Forum</a></div>
-
-                <div class="media-icon"><a href="#"><img src="img/theme-2/c-icon.png" alt=""/></a> <a href="#"><img
-                            src="img/theme-2/c-icon1.png" alt=""/></a> <a href="#"><img src="img/theme-2/c-icon2.png"
-                                                                                        alt=""/></a> <a href="#"><img
-                            src="img/theme-2/c-icon3.png" alt=""/></a></div>
-
-                <div class="copy"><span>© 2016 All rights reserved. Cintria</span></div>
-
-            </div>
-
-            <div class="back-to-top"><i class="fa fa-chevron-up"></i></div>
-
-        </footer>
-
-
-        <!-- POPUP "VIDEO" -->
-
-        <div class="video-popup"><span></span> <span></span>
-
-            <iframe src="#"></iframe>
-
-            <a href="#"></a></div>
-
-    </div>
-
 </div>
 
 
