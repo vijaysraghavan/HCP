@@ -114,7 +114,7 @@
 
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input type="password" placeholder="Your password" value="" name="password"/>
-                            <!--input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" /-->
+                            
                             <p style="padding-left:100px;">
                                 <a name="forgotpassword" href="javascript:window.open('fpass.php','Forgot password','width=500,height=150')">Forgot password?</a>
                             </p>
@@ -283,12 +283,6 @@ if (isset($_POST['login'])) {
         </script>
         <?php
     }
-}
-
-if (isset($_POST['forgotpassword'])) {
-    alert('yash');
-    
-
 }
 
 if (isset($_POST['newsletter'])) {
