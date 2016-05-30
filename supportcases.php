@@ -150,7 +150,7 @@
                                 <thead>
                                 <tr>
                                     <th>S.No</th>
-                                    <th>Case Number</th>
+                                    <th>Case #</th>
                                     <th>Type</th>
                                     <th>Reason</th>
                                     <th>Subject</th>
