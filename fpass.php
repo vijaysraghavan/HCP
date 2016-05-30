@@ -12,29 +12,5 @@
 	
 	</form>
         
-        if (isset($_POST['forgotpassword'])) {
-	    //Post Values
-	    $mailto = pg_escape_string($_POST['email']);
-	    $password = getPassword($mailto);
-	    
-	    $subject = "Your Cintria password";
-	    $message = "Your password is " + $password;
-	    $mailstatus = mail($mailto, $subject, $message);
-	    if ($mailstatus) {
-	        ?>
-	        <script type="text/javascript">
-	            $.notify("Email sent successfully.", 'success')
-	        </script>
-	    <?php
-	    }
-	    else{
-	    ?>
-	        <script type="text/javascript">
-	            $.notify("Sending email failed.", {
-	                style: 'bootstrap'
-	            });
-	        </script>
-	        <?php
-	    }
-	}
+        
 ?>
