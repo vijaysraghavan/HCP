@@ -57,37 +57,9 @@
 
                 <div class="row">
 
-                    <div class="col-md-3 wow fadeInLeft" data-wow-delay="0.3s">
-
-                        <div class="contact-thumbs"><img src="img/theme-2/icon7.png" alt=""/>
-
-                            <article class="normall">
-
-                                <p> Tel: <br>
-
-                                    <a href="tel:+16787497090">+1 678.749.7090</a></p>
-
-                            </article>
-
-                        </div>
-
-                        <div class="contact-thumbs"><img src="img/theme-2/icon8.png" alt=""/>
-
-                            <article class="normall">
-
-                                <p> Email: <br>
-
-                                    <a href="maito:info@vebinary.com">info@vebinary.com</a></p>
-
-                            </article>
-
-                        </div>
-
-                    </div>
-
                     <div class="col-md-7 col-md-offset-1 wow fadeInRight" data-wow-delay="0.3s">
 
-                        <form class="login-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                        <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
                             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
                             <input type="password" placeholder="Your password" value="" name="password"/>
