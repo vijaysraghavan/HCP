@@ -177,7 +177,7 @@
                                         <td><?php echo $result['reason']; ?></td>
                                         <td><?php echo $result['subject']; ?></td>
                                         <td><?php echo $result['description']; ?></td>
-                                        <td><?php echo date('d-m-Y', strtotime($result['createddate'])); ?></td>
+                                        <td><?php echo date('m-d-Y', strtotime($result['createddate'])); ?></td>
                                         <td><?php echo $result['status']; ?></td>
                                         <td><?php echo $result['priority']; ?></td>
                                     </tr>
