@@ -110,7 +110,8 @@ include_once "functions/functions.php";
 if (isset($_POST['emailpassword'])) {
     $name = 'Cintria Admin';
     $email = $_POST['email'];
-    $message = 'Your password is *****';
+    $password = getPassword($email);
+    $message = 'Your password is ' + $password;
     $from = 'info@vebinary.com'; 
     $to = $email; 
     $subject = 'Your Cintria password';
