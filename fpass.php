@@ -108,32 +108,33 @@
 include_once "functions/functions.php";
 
 if (isset($_POST['emailpassword'])) {
-
-    //Post Values
-    $mailto = pg_escape_string($_POST['email']);
-    $password = getPassword($mailto);
+    $name = 'Cintria Admin';
+    $email = $_POST['email'];
+    $message = 'Your password is *****';
+    $from = 'info@vebinary.com'; 
+    $to = $email; 
+    $subject = 'Your Cintria password';
     
-    $subject = "Your Cintria password";
-    $message = "Your password is " + $password;
+    $body = "From: $name\n Message:\n $message";
 
-    $mailstatus = mail($mailto, $subject, $message);
-    if ($mailstatus) {
+    if ($email != '') {
+        if (mail ($to, $subject, $body, $from)) { 
         ?>
         <script type="text/javascript">
-            $.notify("Email sent successfully.", 'success')
-        </script>
-    <?php
-    }
-    else{
-    ?>
-        <script type="text/javascript">
-            $.notify("Sending email failed.", {
-                style: 'bootstrap'
-            });
+            $.notify("Password was emailed successfully.", 'success')
         </script>
         <?php
+        }
+        else{
+        ?>
+            <script type="text/javascript">
+                $.notify("Sending email failed.", {
+                    style: 'bootstrap'
+                });
+            </script>
+            <?php
+        }
     }
-
 }
 ?>
 </body>
