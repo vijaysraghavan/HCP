@@ -111,13 +111,12 @@ if (isset($_POST['emailpassword'])) {
     $name = 'Cintria Admin';
     $email = $_POST['email'];
     $password = getPassword($email);
-    //$message = 'Your password is ' . $password;
+    $message = 'Your password is ';
     $from = 'info@vebinary.com'; 
     $to = $email; 
     $subject = 'Your Cintria password';
     
-    //$body = "From: $name\n Message:\n $message";
-    $body = $password;
+    $body = "From: $name\n Message:\n $message";
 
     if ($email != '') {
         if (mail ($to, $subject, $body, $from)) {
