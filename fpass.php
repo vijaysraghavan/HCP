@@ -112,20 +112,18 @@ if (isset($_POST['emailpassword'])) {
     $email = $_POST['email'];
     $password = getPassword($email);
     
-    //$message = "Your password is " . $password;
-    $message = $password;
+    $message = "Your password is " . $password;
+    echo '<script language="javascript">';
+        echo 'alert("'.$message.'")';
+        echo '</script>';
+        
     $from = 'info@vebinary.com'; 
     $to = $email; 
     $subject = 'Your Cintria password';
     
-    //$body = "From: $name\n Message:\n $message";
-    $body = $password;
+    $body = "From: $name\n Message:\n $message";
 
     if ($email != '') {
-        echo '<script language="javascript">';
-        echo 'alert("'.$body.'")';
-        echo '</script>';
-        
         if (mail ($to, $subject, $body, $from)) { 
         <script type="text/javascript">
             $.notify("Password was emailed successfully.", 'success');
