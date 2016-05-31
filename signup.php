@@ -141,7 +141,7 @@
 
                                 <p> Tel: <br>
 
-                                    <a href="tel:+16787497090">+1 678.749.7090</a></p>
+                                    <a href="tel:+18005277449">+1 800 527 PHIZ [7449]</a></p>
 
                             </article>
 
@@ -153,7 +153,7 @@
 
                                 <p> Email: <br>
 
-                                    <a href="maito:info@vebinary.com">info@vebinary.com</a></p>
+                                    <a href="maito:info@vebinary.com">info@phiz.co</a></p>
 
                             </article>
 
