@@ -123,6 +123,25 @@
                                 <div class="button">Sign In
                                     <input type="submit" value="" name="login"/>
                                 </div>
+                                
+                                <form class="forget-form" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>"
+                                      name="forget-form">
+
+                                    <input class="required" type="text" placeholder="Your email" value="" name="email"/>
+
+                                    <div class="submit-wraper">
+
+                                        <div class="button" style="margin-right:20%;">Reset Password
+
+                                            <input type="submit" name="resetpassword"/>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- <input type="hidden" name="mailto" value="info@vebinary.com" style="display: none;" /> -->
+
+                                </form>
 
                             </div>
 
