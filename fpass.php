@@ -116,7 +116,6 @@ if (isset($_POST['emailpassword'])) {
     
     echo '<script language="javascript">';
     echo 'alert("'.$email.'")';
-    echo 'alert("'.$password.'")';
     echo '</script>';
     
     $message = 'Your password is ' + $password;
