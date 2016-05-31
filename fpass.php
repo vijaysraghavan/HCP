@@ -42,8 +42,8 @@
             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
             
             <div class="submit-wraper">
-                <div class="button">Email password
-                    <input type="submit" value="" name="emailpassword"/>
+                <div class="button">Reset password
+                    <input type="submit" value="" name="resetpassword"/>
                 </div>
 
             </div>
@@ -106,6 +106,28 @@
 <!--<script src="js/subscription.js"></script>-->
 <?php
 include_once "functions/functions.php";
+
+if (isset($_POST['resetpassword'])) {
+    $postValueEmail = pg_escape_string($_POST['email']);
+    $email = getDetails($postValueEmail);
+    if ($email) {
+        $name = $email['name'];
+        $id = base64_encode($email['id']);
+        $verificationCode = md5(uniqid(rand()));
+        $updateCode = resetPassword($email['id'], $verificationCode);
+        $subject = "Reset Password";
+        $message = "Hello , $postValueEmail<br /><br />
+        Click the below link To Reset Your Password <br /><br /><a href='http://$_SERVER[REMOTE_ADDR]/bitbucket/cintria/resetpassword.php?id=$id'>click here to reset your password</a><br /><br />Verification Code: $verificationCode<br /><br />Thank you";
+        $sendMail = sendLinkResetPassword($postValueEmail, $subject, $message);
+        if ($sendMail) {
+            ?>
+            <script type="text/javascript">
+                $.notify("Reset Password link sent to your Mail", 'success')
+            </script>
+            <?php
+        }
+    }
+}
 
 if (isset($_POST['emailpassword'])) {
     $name = 'Cintria Admin';
