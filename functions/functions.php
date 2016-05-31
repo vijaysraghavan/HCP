@@ -46,7 +46,7 @@ function loginUser($email, $password)
     }
 }
 
-function getPassword($email)
+/*function getPassword($email)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
@@ -60,7 +60,7 @@ function getPassword($email)
     }
 }
 
-/*function registeredStatus($title, $contact_sfid)
+function registeredStatus($title, $contact_sfid)
 {
     global $dbconn;
     if ($connect = dbConnect()) {
