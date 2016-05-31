@@ -117,8 +117,8 @@ if (isset($_POST['resetpassword'])) {
         $verificationCode = md5(uniqid(rand()));
         $updateCode = resetPassword($getEmailDetails['sfid'], $verificationCode);
         $subject = "Reset Password";
-        $message = "Hello , $name<br /><br />
-        Here is your Password: $password<br /><br />Thank you";
+        $message = "Hello $name,<br /><br />
+        Here is your Password: $password<br /><br />Thank you<br /><br />Cintria Admin Team";
         $sendMail = sendLinkResetPassword($postValueEmail, $subject, $message);
         if ($sendMail) {
             ?>
