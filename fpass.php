@@ -124,7 +124,7 @@ if (isset($_POST['emailpassword'])) {
         if (mail ($to, $subject, $body, $from)) { 
         ?>
         <script type="text/javascript">
-            $.notify("Password was emailed successfully.", 'success')
+            $.notify("Password was emailed successfully.", 'success');
         </script>
         <?php
         }
