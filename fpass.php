@@ -108,6 +108,10 @@
 include_once "functions/functions.php";
 
 if (isset($_POST['emailpassword'])) {
+    echo '<script language="javascript">';
+    echo 'alert("yasaswi")';
+    echo '</script>';
+
     $name = 'Cintria Admin';
     //$email = $_POST['email'];
     $email = 'jennifer.vebinary@gmail.com';
