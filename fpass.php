@@ -112,6 +112,10 @@ if (isset($_POST['emailpassword'])) {
     $email = $_POST['email'];
     $password = getPassword($email);
     
+    echo '<script language="javascript">';
+    echo 'alert("'.$email.'")';
+    echo '</script>';
+    
     $message = 'Your password is ' + $password;
     $from = 'info@vebinary.com'; 
     $to = $email; 
