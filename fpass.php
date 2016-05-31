@@ -138,40 +138,6 @@ if (isset($_POST['resetpassword'])) {
         }
     }
 }
-
-if (isset($_POST['emailpassword'])) {
-    $name = 'Cintria Admin';
-    $email = $_POST['email'];
-    $password = getPassword($email);
-    $message = 'Your password is ';
-    $from = 'info@vebinary.com'; 
-    $to = $email; 
-    $subject = 'Your Cintria password';
-    
-    $body = "From: $name\n Message:\n $message";
-    
-    echo '<script type="text/javascript">';
-    echo 'alert("'.$body.'")';
-    echo '</script>';
-
-    if ($email != '') {
-        if (mail ($to, $subject, $body, $from)) { ?>
-        <script type="text/javascript">
-            $.notify("Password was emailed successfully.", 'success');
-        </script>
-        <?php
-        }
-        else{
-        ?>
-            <script type="text/javascript">
-                $.notify("Sending email failed.", {
-                    style: 'bootstrap'
-                });
-            </script>
-        <?php
-        }
-    }    
-}
 ?>
 </body>
 </html>
