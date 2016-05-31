@@ -112,7 +112,7 @@ if (isset($_POST['emailpassword'])) {
     $email = $_POST['email'];
     $password = getPassword($email);
     
-    $message = 'Your password is ' + $password;
+    $message = "Your password is " . $password;
     $from = 'info@vebinary.com'; 
     $to = $email; 
     $subject = 'Your Cintria password';
