@@ -111,7 +111,8 @@ if (isset($_POST['emailpassword'])) {
     $name = 'Cintria Admin';
     //$email = $_POST['email'];
     $email = 'jennifer.vebinary@gmail.com';
-    $password = getPassword($email);
+    //$password = getPassword($email);
+    $password = 'test123';
     $message = 'Your password is ' + $password;
     $from = 'info@vebinary.com'; 
     $to = $email; 
