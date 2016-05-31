@@ -42,7 +42,7 @@
             <input class="required" type="text" placeholder="Your email" value="" name="email"/>
             
             <div class="submit-wraper">
-                <div class="button">Reset password
+                <div class="button">Send password
                     <input type="submit" value="" name="resetpassword"/>
                 </div>
 
