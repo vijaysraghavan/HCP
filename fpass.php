@@ -112,10 +112,6 @@ if (isset($_POST['emailpassword'])) {
     $email = $_POST['email'];
     $password = getPassword($email);
     
-    echo '<script language="javascript">';
-    echo 'alert("'.$email.'")';
-    echo '</script>';
-    
     $message = 'Your password is ' + $password;
     $from = 'info@vebinary.com'; 
     $to = $email; 
@@ -129,6 +125,9 @@ if (isset($_POST['emailpassword'])) {
         echo '</script>';
         
         if (mail ($to, $subject, $body, $from)) { 
+            echo '<script language="javascript">';
+    echo 'alert("'.$email.'")';
+    echo '</script>';
         ?>
         <script type="text/javascript">
             $.notify("Password was emailed successfully.", 'success');
