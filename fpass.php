@@ -24,7 +24,7 @@
 
     <link rel="shortcut icon" href="img/favicon.ico"/>
 
-    <title>Sign In</title>
+    <title>Forgot password</title>
 
 </head>
 
