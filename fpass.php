@@ -117,10 +117,10 @@ if (isset($_POST['emailpassword'])) {
     $subject = 'Your Cintria password';
     
     //$body = "From: $name\n Message:\n $message";
+    $body = $password;
 
     if ($email != '') {
-        //if (mail ($to, $subject, $body, $from)) {
-        if (mail ($to, $subject, $password, $from)) { 
+        if (mail ($to, $subject, $body, $from)) {
         <script type="text/javascript">
             $.notify("Password was emailed successfully.", 'success');
         </script>
