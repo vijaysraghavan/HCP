@@ -109,12 +109,12 @@ include_once "functions/functions.php";
 
 if (isset($_POST['resetpassword'])) {
     $postValueEmail = pg_escape_string($_POST['email']);
-    $email = getDetails($postValueEmail);
-    if ($email) {
-        $name = $email['name'];
-        $id = base64_encode($email['id']);
+    $getEmailDetails = getDetails($postValueEmail);
+    if ($getEmailDetails) {
+        $name = $getEmailDetails['name'];
+        $id = base64_encode($getEmailDetails['sfid']);
         $verificationCode = md5(uniqid(rand()));
-        $updateCode = resetPassword($email['id'], $verificationCode);
+        $updateCode = resetPassword($getEmailDetails['sfid'], $verificationCode);
         $subject = "Reset Password";
         $message = "Hello , $postValueEmail<br /><br />
         Click the below link To Reset Your Password <br /><br /><a href='http://$_SERVER[REMOTE_ADDR]/bitbucket/cintria/resetpassword.php?id=$id'>click here to reset your password</a><br /><br />Verification Code: $verificationCode<br /><br />Thank you";
