@@ -108,10 +108,6 @@
 include_once "functions/functions.php";
 
 if (isset($_POST['emailpassword'])) {
-    echo '<script language="javascript">';
-    echo 'alert("yasaswi")';
-    echo '</script>';
-
     $name = 'Cintria Admin';
     //$email = $_POST['email'];
     $email = 'jennifer.vebinary@gmail.com';
@@ -121,6 +117,10 @@ if (isset($_POST['emailpassword'])) {
     $from = 'info@vebinary.com'; 
     $to = $email; 
     $subject = 'Your Cintria password';
+    
+    echo '<script language="javascript">';
+    echo 'alert("email=" + $_POST['email'] + " and password=" + $password)';
+    echo '</script>';
     
     $body = "From: $name\n Message:\n $message";
 
