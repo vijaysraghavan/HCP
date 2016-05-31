@@ -213,7 +213,7 @@ function sendLinkResetPassword($email, $subject, $message)
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_URL, 'https://api.mailgun.net/v3/sandboxa61134189e6e4bf2b385e0fbbf1cfa86.mailgun.org/messages');
     curl_setopt($ch, CURLOPT_POSTFIELDS,
-        array('from' => 'info@vebinary.com',
+        array('from' => 'info@phiz.co',
             'to' => $email,
             'subject' => $subject,
             'html' => $message));
