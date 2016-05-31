@@ -240,7 +240,7 @@ video.bgvid {position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 
 /* 05 - HEADER */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 header{position: fixed; left: 0px; width: 100%; z-index:11;  -webkit-backface-visibility: hidden;}
-#logo{position: relative; float: left; margin-left: 50px; margin-top: 20px;}
+#logo{position: relative; float: left; margin-left: 50px; margin-top: 18px;}
 #logo img{position: relative; float: left;}
 #logo img.act{position: absolute; left: 0px; top: 0px; opacity:0;}
 nav{position: relative; float: right; padding-right: 45px;}
