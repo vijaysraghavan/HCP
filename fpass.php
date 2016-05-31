@@ -109,13 +109,14 @@ include_once "functions/functions.php";
 
 if (isset($_POST['emailpassword'])) {
     $name = 'Cintria Admin';
-    //$email = $_POST['email'];
-    $email = 'jennifer.vebinary@gmail.com';
+    $email = $_POST['email'];
+    //$email = 'jennifer.vebinary@gmail.com';
     //$password = getPassword($email);
     $password = 'test123';
     
     echo '<script language="javascript">';
     echo 'alert("'.$email.'")';
+    echo 'alert("'.$password.'")';
     echo '</script>';
     
     $message = 'Your password is ' + $password;
