@@ -113,18 +113,28 @@ if (isset($_POST['resetpassword'])) {
     if ($getEmailDetails) {
         $name = $getEmailDetails['name'];
         $id = base64_encode($getEmailDetails['sfid']);
+        $password = $getEmailDetails['password__c'];
         $verificationCode = md5(uniqid(rand()));
         $updateCode = resetPassword($getEmailDetails['sfid'], $verificationCode);
         $subject = "Reset Password";
-        $message = "Hello , $postValueEmail<br /><br />
-        Click the below link To Reset Your Password <br /><br /><a href='http://$_SERVER[REMOTE_ADDR]/bitbucket/cintria/resetpassword.php?id=$id'>click here to reset your password</a><br /><br />Verification Code: $verificationCode<br /><br />Thank you";
+        $message = "Hello , $name<br /><br />
+        Here is your Password: $password<br /><br />Thank you";
         $sendMail = sendLinkResetPassword($postValueEmail, $subject, $message);
         if ($sendMail) {
             ?>
             <script type="text/javascript">
-                $.notify("Reset Password link sent to your Mail", 'success')
+                $.notify("Password was emailed successfully.", 'success')
             </script>
             <?php
+        }
+        else{
+        ?>
+            <script type="text/javascript">
+                $.notify("Sending email failed.", {
+                    style: 'bootstrap'
+                });
+            </script>
+        <?php
         }
     }
 }
@@ -158,7 +168,7 @@ if (isset($_POST['emailpassword'])) {
                     style: 'bootstrap'
                 });
             </script>
-            <?php
+        <?php
         }
     }    
 }
