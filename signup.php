@@ -153,7 +153,7 @@
 
                                 <p> Email: <br>
 
-                                    <a href="maito:info@vebinary.com">info@phiz.co</a></p>
+                                    <a href="maito:info@phiz.co">info@phiz.co</a></p>
 
                             </article>
 
