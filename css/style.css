@@ -240,7 +240,7 @@ video.bgvid {position: fixed; right: 0; bottom: 0; min-width: 100%; min-height: 
 /* 05 - HEADER */
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 header{position: fixed; left: 0px; width: 100%; z-index:11;  -webkit-backface-visibility: hidden;}
-#logo{position: relative; float: left; margin-left: 50px; margin-top: 10px;}
+#logo{position: relative; float: left; margin-left: 50px; margin-top: 20px;}
 #logo img{position: relative; float: left;}
 #logo img.act{position: absolute; left: 0px; top: 0px; opacity:0;}
 nav{position: relative; float: right; padding-right: 45px;}
@@ -260,7 +260,7 @@ nav ul ul li a:after{display: none;}
 nav .submeny:hover ul li a{height: 39px; font-size: 13px; line-height: 39px;}
 nav .submeny:hover .submeny-top{background:#fbc011; color: #fff;}
 header.act{background:#fff; box-shadow: 0px 1px 5px rgba(0,0,0,0.15);}
-header.act #logo{background:#fff; margin-top: 12px;}
+header.act #logo{background:#fff; margin-top: 14px;}
 header.act #logo img{opacity:0;}
 header.act #logo img.act{opacity:1;}
 header.act nav a{color:#777777; margin-top: 15px; margin-bottom: 15px;}
