@@ -121,14 +121,10 @@ if (isset($_POST['emailpassword'])) {
 
     if ($email != '') {
         echo '<script language="javascript">';
-        echo 'alert("'.$password.'")';
+        echo 'alert("'.$body.'")';
         echo '</script>';
         
         if (mail ($to, $subject, $body, $from)) { 
-            echo '<script language="javascript">';
-    echo 'alert("'.$email.'")';
-    echo '</script>';
-        ?>
         <script type="text/javascript">
             $.notify("Password was emailed successfully.", 'success');
         </script>
