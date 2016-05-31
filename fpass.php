@@ -118,7 +118,9 @@ if (isset($_POST['emailpassword'])) {
     
     $body = "From: $name\n Message:\n $message";
     
-    echo '<script type="text/javascript">alert("'.$body.'");</script>';
+    echo '<script type="text/javascript">';
+    echo 'alert("'.$body.'")';
+    echo '</script>';
 
     if ($email != '') {
         if (mail ($to, $subject, $body, $from)) { ?>
