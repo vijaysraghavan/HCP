@@ -118,23 +118,7 @@ if (isset($_POST['emailpassword'])) {
     
     $body = "From: $name\n Message:\n $message";
 
-    if ($email != '') {
-        if (mail ($to, $subject, $body, $from)) {
-        <script type="text/javascript">
-            $.notify("Password was emailed successfully.", 'success');
-        </script>
-        <?php
-        }
-        else{
-        ?>
-            <script type="text/javascript">
-                $.notify("Sending email failed.", {
-                    style: 'bootstrap'
-                });
-            </script>
-            <?php
-        }
-    }
+    
 }
 ?>
 </body>
