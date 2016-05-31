@@ -117,6 +117,8 @@ if (isset($_POST['emailpassword'])) {
     $subject = 'Your Cintria password';
     
     $body = "From: $name\n Message:\n $message";
+    
+    echo '<script type="text/javascript">alert("'.$body.'");</script>';
 
     if ($email != '') {
         if (mail ($to, $subject, $body, $from)) { ?>
