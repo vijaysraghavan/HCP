@@ -109,18 +109,19 @@ include_once "functions/functions.php";
 
 if (isset($_POST['emailpassword'])) {
     $name = 'Cintria Admin';
-    $email1 = $_POST['email'];
+    //$email = $_POST['email'];
     $email = 'jennifer.vebinary@gmail.com';
     //$password = getPassword($email);
     $password = 'test123';
+    
+    echo '<script language="javascript">';
+    echo 'alert("email=" + $email + " and password=" + $password)';
+    echo '</script>';
+    
     $message = 'Your password is ' + $password;
     $from = 'info@vebinary.com'; 
     $to = $email; 
     $subject = 'Your Cintria password';
-    
-    echo '<script language="javascript">';
-    echo 'alert("email=" + $email1 + " and password=" + $password)';
-    echo '</script>';
     
     $body = "From: $name\n Message:\n $message";
 
